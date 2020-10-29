@@ -93,7 +93,7 @@
   display: none;
 }
 
-.nav-list {
+.nav-list-inactive {
   display: none;
 }
 
@@ -104,7 +104,7 @@
     display: none;
   }
 
-  .nav-list {
+  .nav-list-active {
     display: flex;
     position: absolute;
 
