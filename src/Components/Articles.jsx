@@ -6,7 +6,8 @@ const articles = [
     title: 'Présentation du jeu',
     author: 'By Vivien Michelesi',
     paragraphe:
-      "Hearthstone est un jeu de cartes à collectionner en ligne, développé et édité par la société Blizzard Entertainment. C'est un jeu gratuit s'inspirant de l'univers de fiction médiéval-fantastique du jeu vidéo Warcraft développé par Blizzard. Le nom du jeu est inspiré d'un objet, l’Hearthstone (la « Pierre de foyer » en français), issu du MMORPG World of Warcraft. Au début d'une partie, le joueur choisit un des dix héros du jeu, issus du jeu Warcrafta et un jeu de 30 cartes (deck), préalablement créé par le joueur, pour disputer une bataille contre un joueur adverse dans l'un des différents modes de jeu. Les deux adversaires s'affrontent sur un plateau de jeu virtuel, similaire à un jeu de plateau. Les héros disposent de 30 points de vie et d'un point de mana (ou 0) au premier tour de jeu, la mana augmentant d'un point par tour jusqu’à atteindre un maximum de 10 points. Les points de mana servent à activer les cartes du deck sur le plateau de jeu, ainsi que le pouvoir héroïque du héros. Le but du jeu est de réduire à zéro les points de vie du héros adverse, par l'utilisation de serviteurs, de sorts, d'armes (symbolisés par les cartes du deck du joueur) ou par l'utilisation du pouvoir héroïque du héros que contrôle le joueur (selon les cas). Si l'un des héros arrive à 0 point de vie, son icône sur le plateau de jeu explose, et son adversaire remporte la partie",
+      "Hearthstone est un jeu de cartes à collectionner en ligne, développé et édité par la société Blizzard Entertainment. C'est un jeu gratuit s'inspirant de l'univers de fiction médiéval-fantastique du jeu vidéo Warcraft développé par Blizzard. Le nom du jeu est inspiré d'un objet, l’Hearthstone (la « Pierre de foyer » en français), issu du MMORPG World of Warcraft. Au début d'une partie, le joueur choisit un des dix héros du jeu, issus du jeu Warcraft et un jeu de 30 cartes (deck), préalablement créé par le joueur, pour disputer une bataille contre un joueur adverse dans l'un des différents modes de jeu. Les deux adversaires s'affrontent sur un plateau de jeu virtuel, similaire à un jeu de plateau. Les héros disposent de 30 points de vie et d'un point de mana (ou 0) au premier tour de jeu, la mana augmentant d'un point par tour jusqu’à atteindre un maximum de 10 points. Les points de mana servent à activer les cartes du deck sur le plateau de jeu, ainsi que le pouvoir héroïque du héros. Le but du jeu est de réduire à zéro les points de vie du héros adverse, par l'utilisation de serviteurs, de sorts, d'armes (symbolisés par les cartes du deck du joueur) ou par l'utilisation du pouvoir héroïque du héros que contrôle le joueur (selon les cas). Si l'un des héros arrive à 0 point de vie, son icône sur le plateau de jeu explose, et son adversaire remporte la partie",
+    button: 'Voir plus',
   },
   {
     title: "Analyse d'une carte",
@@ -23,6 +24,7 @@ const Articles = () => (
         title={article.title}
         author={article.author}
         paragraphe={article.paragraphe}
+        button={article.button}
       />
     ))}
   </div>

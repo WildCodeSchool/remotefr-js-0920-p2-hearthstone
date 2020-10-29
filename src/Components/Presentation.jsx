@@ -5,16 +5,33 @@ import PropTypes from 'prop-types';
 class Presentation extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      nonVisible: props.nonVisible,
+    };
   }
 
   render() {
-    const { title, author, paragraphe } = this.props;
+    const { title, author, paragraphe, button } = this.props;
+    const { nonVisible } = this.state;
     return (
       <div className="Presentation">
         <h2 className="title">{title}</h2>
         <p className="author">{author}</p>
-        <p className="paragraphe">{paragraphe}</p>
+        <p
+          className={nonVisible ? 'paragraphe-invisble' : 'paragraphe-visible'}
+        >
+          {paragraphe}
+        </p>
+        <button
+          type="button"
+          className="buttonPlus"
+          onClick={() => {
+            const voirPlus = !nonVisible;
+            this.setState({ nonVisible: voirPlus });
+          }}
+        >
+          {button}
+        </button>
       </div>
     );
   }
@@ -35,6 +52,8 @@ Presentation.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   paragraphe: PropTypes.string.isRequired,
+  button: PropTypes.string.isRequired,
+  nonVisible: PropTypes.bool.isRequired,
 };
 
 export default Presentation;

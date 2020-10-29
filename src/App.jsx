@@ -1,5 +1,5 @@
 import './App.css';
-import Articles from './Components/Articles';
+import Articles from './components/Articles';
 
 function App() {
   return <Articles />;
