@@ -1,0 +1,37 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+}
+footer {
+  background-color: silver;
+  color: #eee;
+  margin: 0;
+  max-height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.socialLinks {
+  display: flex;
+  width: 0.1em;
+  flex-wrap: wrap;
+  padding-top: 15px;
+}
+
+/* .socialLinks a {
+  width: 2rem;
+  height: 2rem;
+  margin: 2px;
+} */
+
+/* .socialLinks a img {
+  justify-self: bottom;
+  width: 2rem;
+  height: 2rem;
+} */
