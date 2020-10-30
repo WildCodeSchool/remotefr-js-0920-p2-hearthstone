@@ -1,6 +1,6 @@
 import './Footer.css';
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
       <div>
         <p>Plan du site</p>
       </div>
-      <div>
+      {/* <div>
         <ul className="plan">
           <li>
             <Link
@@ -30,7 +30,7 @@ const Footer = () => {
         <svg src="../assets/twitter.svg" alt="Twitter" />
         <Link to="https://www.youtube.com" title="Visitez notre page Youtube" />
         <svg src="../assets/youtube.svg" alt="Youtube" />
-      </div>
+      </div> */}
     </footer>
   );
 };
