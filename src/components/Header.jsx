@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Logo from '../img/logo-image.png';
+import Logo from '../assets/logo-image.png';
 import './Header.css';
 
 class Header extends React.Component {
@@ -31,26 +31,62 @@ class Header extends React.Component {
           </span>
         </button>
         <ul className={active ? 'nav-list-active' : 'nav-list-inactive'}>
-          <li className="nav-list-item">
-            <a className="nav-link" href="nav1.html">
+          <li
+            className={
+              active ? 'nav-list-item-active' : 'nav-list-item-inactive'
+            }
+          >
+            <a
+              className={
+                active ? 'nav-link-item-active' : 'nav-link-item-inactive'
+              }
+              href="nav1.html"
+            >
               Advanced search
             </a>
           </li>
-          <li className="nav-list-item">
-            <a className="nav-link" href="nav2.html">
+          <li
+            className={
+              active ? 'nav-list-item-active' : 'nav-list-item-inactive'
+            }
+          >
+            <a
+              className={
+                active ? 'nav-link-item-active' : 'nav-link-item-inactive'
+              }
+              href="nav2.html"
+            >
               Random card{' '}
               <span role="img" aria-label="emoji">
                 🎲
               </span>
             </a>
           </li>
-          <li className="nav-list-item">
-            <a className="nav-link" href="nav3.html">
+          <li
+            className={
+              active ? 'nav-list-item-active' : 'nav-list-item-inactive'
+            }
+          >
+            <a
+              className={
+                active ? 'nav-link-item-active' : 'nav-link-item-inactive'
+              }
+              href="nav3.html"
+            >
               Deck building
             </a>
           </li>
-          <li className="nav-list-item">
-            <a className="nav-link" href="nav4.html">
+          <li
+            className={
+              active ? 'nav-list-item-active' : 'nav-list-item-inactive'
+            }
+          >
+            <a
+              className={
+                active ? 'nav-link-item-active' : 'nav-link-item-inactive'
+              }
+              href="nav4.html"
+            >
               Tournaments
             </a>
           </li>
@@ -58,7 +94,7 @@ class Header extends React.Component {
         <div className="search-bar">
           <input type="search" id="search" />
           <button type="button" id="search-button">
-            <span role="img" aria-label="emoji">
+            <span role="img" aria-label="emoji" id="emoji">
               🔍
             </span>
           </button>
