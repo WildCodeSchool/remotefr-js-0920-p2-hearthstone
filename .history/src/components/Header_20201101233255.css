@@ -91,7 +91,11 @@
 .nav-list-active {
   position: absolute;
   right: 0;
-  margin-top: 347px;
+  margin-top: 143px;
+
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+  transition: transform 3s ease;
 
   list-style-type: none;
 }
@@ -110,6 +114,7 @@
 .nav-link-item-active {
   color: black;
   text-decoration: none;
+  transform: scaleY(1);
 }
 
 /* ------ Desktop version ------ */

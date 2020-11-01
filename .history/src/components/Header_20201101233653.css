@@ -98,7 +98,7 @@
 
 .nav-list-item-active {
   position: relative;
-  display: flex;
+  display: block;
   background-color: rgba(98, 201, 249, 0.808);
   transition: filter 400ms;
   padding: 10px 20px;
