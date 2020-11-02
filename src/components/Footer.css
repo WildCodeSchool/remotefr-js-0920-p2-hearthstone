@@ -1,37 +1,142 @@
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@600&display=swap');
+
+.fix-footer {
+  position: relative;
+  min-height: 100%;
+}
+.fix-footer:after {
+  content: '';
+  display: block;
+  height: 40px;
 }
 footer {
-  background-color: silver;
+  font-family: 'Pridi', serif;
+  min-height: 40px;
+  /* background-color: rgba(124, 81, 42, 0.7); */
+  background: url(../assets/texture.jpg);
+  background-size: cover;
   color: #eee;
-  margin: 0;
-  max-height: 10%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   position: absolute;
-  bottom: 0;
   width: 100%;
 }
-
-.socialLinks {
-  display: flex;
-  width: 0.1em;
-  flex-wrap: wrap;
-  padding-top: 15px;
+.container {
+  margin: auto;
 }
-
-/* .socialLinks a {
-  width: 2rem;
-  height: 2rem;
+.footer-container {
+  display: flex;
+  margin: 1em;
+}
+.footer-container div {
+  flex: auto;
+  justify-content: space-around;
+  /* vertical-align: middle; */
+}
+.footer-container ul {
+  list-style: none;
+}
+.footer-container a {
+  text-decoration: none;
+  background-color: transparent;
+  display: block;
+  padding: 3px;
+  color: #fff;
+}
+ul li {
+  /* display: flex;
+  justify-content: left; */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+}
+.logo img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.socialLinks-container {
+  display: flex;
+  width: 5em;
+  height: auto;
+  flex-wrap: wrap;
+  vertical-align: middle;
+}
+.socialLinks {
+  max-width: 25%;
   margin: 2px;
-} */
-
-/* .socialLinks a img {
-  justify-self: bottom;
+}
+.socialLinks a {
   width: 2rem;
   height: 2rem;
+}
+.socialLinks-container img {
+  padding-top: 0.5em;
+}
+/* .team {
+  display: none;
 } */
+
+/*********************************
+Reponsive Media (Desktop)
+**********************************/
+
+@media screen and (min-width: 770px) {
+  .fix-footer {
+    position: relative;
+    min-height: 100%;
+  }
+  .fix-footer:after {
+    content: '';
+    display: block;
+    min-height: 13em;
+  }
+  footer {
+    color: #eee;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 13em;
+  }
+  .footer-container {
+    text-decoration: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+  }
+  .logo {
+    padding: 2em;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .links {
+    margin-top: 1em;
+  }
+  .links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .links ul li {
+    padding: 1em;
+  }
+  .socialLinks {
+    max-width: 40%;
+    padding: 1em;
+  }
+  .socialLinks-container {
+    flex-wrap: nowrap;
+    height: auto;
+  }
+  .socialLinks-container img {
+    padding-top: 4em;
+  }
+  /* .team {
+    display: flex;
+    justify-content: space-around;
+  }
+  .team img {
+    padding: 1em;
+  } */
+}
