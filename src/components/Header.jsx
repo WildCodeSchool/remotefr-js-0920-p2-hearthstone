@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Logo from '../assets/logo-image.png';
+import Logo from '../assets/testlogo2.png';
 import './Header.css';
 
 class Header extends React.Component {
