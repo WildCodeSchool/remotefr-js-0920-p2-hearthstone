@@ -45,13 +45,13 @@
     position: relative;
     display: flex;
     background-size: cover;
-    height: 22em;
+    height: 15em;
   }
 
   .header-title {
     font-family: 'Berkshire Swash', cursive;
     color: #f2cd61;
-    font-size: 450%;
+    font-size: 420%;
 
     padding-bottom: 110px;
     padding-left: 10%;
@@ -59,8 +59,7 @@
 
   .logo {
     display: flex;
-    height: 7em;
-    margin-bottom: 2%;
+    height: 6em;
   }
 }
 
@@ -123,17 +122,13 @@
 
   .nav-list-active,
   .nav-list-inactive {
-    width: 100%;
     display: flex;
-    justify-content: space-evenly;
     position: absolute;
     background-image: url(../assets/texture.jpg);
-    background-size: cover;
-
     filter: opacity(0.9);
 
     height: 20%;
-    margin-top: 283px;
+    margin-top: 180px;
 
     list-style-type: none;
   }
@@ -141,7 +136,7 @@
   .nav-list-item-active,
   .nav-list-item-inactive {
     display: block;
-    padding-top: 17px;
+    padding-top: 14px;
 
     /* background-color: rgba(98, 201, 249, 0.63);
     transition: filter 400ms; */
@@ -152,11 +147,8 @@
 
   .nav-list-item-active:hover,
   .nav-list-item-inactive:hover {
-    /* background-color: rgb(98, 201, 249); */
-
-    border-bottom: solid 6px rgb(98, 201, 249);
-    filter: drop-shadow(3px 3px 8px rgba(98, 201, 249, 0.671));
-    transition: filter 200ms;
+    background-color: rgb(98, 201, 249);
+    filter: opacity(90%);
   }
 
   .nav-link,
@@ -164,7 +156,7 @@
   .nav-link-item:visited,
   .nav-link-item-active,
   .nav-link-item-inactive {
-    color: white;
+    color: black;
     text-decoration: none;
     padding-left: 25px;
     padding-right: 25px;
@@ -191,7 +183,7 @@
     justify-content: flex-end;
 
     margin-right: -2%;
-    margin-bottom: 12%;
+    margin-bottom: 7%;
   }
 
   #search {

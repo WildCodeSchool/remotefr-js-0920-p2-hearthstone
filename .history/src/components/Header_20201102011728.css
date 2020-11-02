@@ -45,13 +45,13 @@
     position: relative;
     display: flex;
     background-size: cover;
-    height: 22em;
+    height: 20em;
   }
 
   .header-title {
     font-family: 'Berkshire Swash', cursive;
     color: #f2cd61;
-    font-size: 450%;
+    font-size: 420%;
 
     padding-bottom: 110px;
     padding-left: 10%;
@@ -59,8 +59,7 @@
 
   .logo {
     display: flex;
-    height: 7em;
-    margin-bottom: 2%;
+    height: 6em;
   }
 }
 
@@ -133,7 +132,7 @@
     filter: opacity(0.9);
 
     height: 20%;
-    margin-top: 283px;
+    margin-top: 255px;
 
     list-style-type: none;
   }
@@ -141,6 +140,7 @@
   .nav-list-item-active,
   .nav-list-item-inactive {
     display: block;
+
     padding-top: 17px;
 
     /* background-color: rgba(98, 201, 249, 0.63);
@@ -154,9 +154,9 @@
   .nav-list-item-inactive:hover {
     /* background-color: rgb(98, 201, 249); */
 
-    border-bottom: solid 6px rgb(98, 201, 249);
-    filter: drop-shadow(3px 3px 8px rgba(98, 201, 249, 0.671));
-    transition: filter 200ms;
+    border-bottom: solid 7px #ffd043;
+    filter: drop-shadow(3px 3px 8px #dfbd58);
+    transition: filter 100ms;
   }
 
   .nav-link,
@@ -191,7 +191,7 @@
     justify-content: flex-end;
 
     margin-right: -2%;
-    margin-bottom: 12%;
+    margin-bottom: 7%;
   }
 
   #search {

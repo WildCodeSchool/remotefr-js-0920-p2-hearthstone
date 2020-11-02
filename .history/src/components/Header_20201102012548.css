@@ -60,7 +60,7 @@
   .logo {
     display: flex;
     height: 7em;
-    margin-bottom: 2%;
+    margin-bottom: 50px;
   }
 }
 
@@ -191,7 +191,7 @@
     justify-content: flex-end;
 
     margin-right: -2%;
-    margin-bottom: 12%;
+    margin-bottom: 7%;
   }
 
   #search {
