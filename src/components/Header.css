@@ -27,15 +27,14 @@
   color: #f2cd61;
   font-size: 25px;
 
-  padding: 1em;
+  padding: 1em 0em;
   padding-right: 1em;
 }
 
 .logo {
   display: flex;
-  height: 42px;
-  margin: 8px 0 0 10px;
-  height: 3em;
+  height: 55px;
+  margin: 8px;
 }
 
 /* ------ Desktop version ------ */
@@ -92,7 +91,8 @@
 .nav-list-active {
   position: absolute;
   right: 0;
-  margin-top: 347px;
+  margin-top: 363px;
+  width: 100%;
 
   list-style-type: none;
 }
@@ -100,8 +100,9 @@
 .nav-list-item-active {
   position: relative;
   display: flex;
+  justify-content: center;
 
-  background-color: rgba(98, 201, 249, 0.808);
+  background-color: rgba(98, 201, 249, 0.97);
   transition: filter 400ms;
   padding: 10px 20px;
 
@@ -133,7 +134,7 @@
     filter: opacity(0.9);
 
     height: 20%;
-    margin-top: 283px;
+    margin-top: 297px;
 
     list-style-type: none;
   }
@@ -190,7 +191,7 @@
     display: flex;
     justify-content: flex-end;
 
-    margin-right: -2%;
+    margin-right: 0%;
     margin-bottom: 1%;
   }
 
