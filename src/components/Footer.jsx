@@ -24,10 +24,10 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="links">
+            <div className="links team">
               <ul>
                 <li>
-                  <a href="./Cgu.html">Terms of service</a>
+                  <a href="./Cgu.html">Our Team</a>
                 </li>
                 <li className="team">
                   <a href="./Privacy.html">Privacy Policy</a>

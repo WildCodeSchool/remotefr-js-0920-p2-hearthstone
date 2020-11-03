@@ -135,8 +135,12 @@ Reponsive Media (Desktop)
   /* .team {
     display: flex;
     justify-content: space-around;
+    padding: 0;
+    margin: 0;
   }
   .team img {
     padding: 1em;
+    margin-bottom: 0;
+    padding-bottom: 0;
   } */
 }
