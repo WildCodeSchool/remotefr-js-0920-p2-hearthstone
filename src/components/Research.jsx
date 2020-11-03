@@ -13,7 +13,6 @@ function Research() {
         <div className="attack">1-10+</div>
         <div className="health">1-10+</div>
         <div className="rareness">Commune Free Rare Epic Legendary</div>
-        <div className="type">Hero Servant Fate Armed</div>
       </section>
       <section className="cards-list">
         <div>Catalogue</div>
