@@ -11,9 +11,7 @@ function App() {
   return (
     <div className="App">
       <Header active={false} />
-      <Articles />;{/* <Switch>
-        <Route path="" />
-      </Switch> */}
+      <Articles />
       <Research />
       <Footer />
     </div>
