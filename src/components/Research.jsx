@@ -31,13 +31,25 @@ class Research extends React.Component {
   }
 
   getCard() {
-    axios
-      .get('https://omgvamp-hearthstone-v1.p.rapidapi.com/cards')
+    const config = {
+      method: 'get',
+      url: 'https://omgvamp-hearthstone-v1.p.rapidapi.com/cards',
+      headers: {
+        'x-rapidapi-key': 'ad80027f46msh8c1a1ed7780b8ccp130a6fjsnd21e03ec0703',
+        'x-rapidapi-host': 'omgvamp-hearthstone-v1.p.rapidapi.com',
+      },
+    };
+
+    axios(config)
       .then((response) => response.data)
       .then((data) => {
+        console.log('axios:', data);
         this.setState({
           card: data[0],
         });
+      })
+      .catch(function (error) {
+        console.log(error);
       });
   }
 

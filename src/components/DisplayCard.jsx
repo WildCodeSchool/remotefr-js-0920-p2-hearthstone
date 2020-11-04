@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function DisplayCard({ card }) {
   return (
@@ -57,5 +58,12 @@ function DisplayCard({ card }) {
     </div>
   );
 }
+
+DisplayCard.propTypes = {
+  card: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    cost: PropTypes.number.isRequired,
+  }),
+};
 
 export default DisplayCard;
