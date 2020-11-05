@@ -59,24 +59,22 @@ function DisplayCard({ card }) {
   );
 }
 
-DisplayCard.propTypes = { name: PropTypes.string.isRequired };
-DisplayCard.propTypes = { playerClass: PropTypes.string.isRequired };
-DisplayCard.propTypes = { rarety: PropTypes.string.isRequired };
-DisplayCard.propTypes = { type: PropTypes.string.isRequired };
-DisplayCard.propTypes = { cost: PropTypes.number.isRequired };
-DisplayCard.propTypes = { attack: PropTypes.number.isRequired };
-DisplayCard.propTypes = { health: PropTypes.number.isRequired };
-DisplayCard.propTypes = { text: PropTypes.string.isRequired };
-DisplayCard.propTypes = { race: PropTypes.string.isRequired };
-DisplayCard.propTypes = { cardSet: PropTypes.string.isRequired };
-DisplayCard.propTypes = { flavor: PropTypes.string.isRequired };
-DisplayCard.propTypes = { artist: PropTypes.string.isRequired };
-
-// DisplayCard.propTypes = {
-//   card: PropTypes.shape({
-//      name: PropTypes.string.isRequired,
-//      cost: PropTypes.number.isRequired,
-//    }),
-//  };
+DisplayCard.propTypes = {
+  card: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    playerClass: PropTypes.string.isRequired,
+    rarety: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    cost: PropTypes.number.isRequired,
+    attack: PropTypes.number.isRequired,
+    health: PropTypes.number.isRequired,
+    text: PropTypes.string.isRequired,
+    race: PropTypes.string.isRequired,
+    cardSet: PropTypes.string.isRequired,
+    flavor: PropTypes.string.isRequired,
+    artist: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default DisplayCard;
