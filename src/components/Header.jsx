@@ -37,31 +37,31 @@ class Header extends React.Component {
               active ? 'nav-list-item-active' : 'nav-list-item-inactive'
             }
           >
-            <a
+            <Link
+              to="/research"
               className={
                 active ? 'nav-link-item-active' : 'nav-link-item-inactive'
               }
-              href="nav1.html"
             >
               Advanced search
-            </a>
+            </Link>
           </li>
           <li
             className={
               active ? 'nav-list-item-active' : 'nav-list-item-inactive'
             }
           >
-            <a
+            <Link
+              to="/random"
               className={
                 active ? 'nav-link-item-active' : 'nav-link-item-inactive'
               }
-              href="nav2.html"
             >
               Random card{' '}
               <span role="img" aria-label="emoji">
                 🎲
               </span>
-            </a>
+            </Link>
           </li>
           <li
             className={

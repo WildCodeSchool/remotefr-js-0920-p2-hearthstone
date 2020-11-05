@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PagePrinc from './components/PagePrinc';
-// import Research from './components/Research';
+import Research from './components/Research';
 import './App.css';
 
 function App() {
@@ -16,6 +16,9 @@ function App() {
         </Route>
         <Route path="/tournament">
           <PagePrinc />
+        </Route>
+        <Route path="/research">
+          <Research />
         </Route>
       </Switch>
       <Footer />
