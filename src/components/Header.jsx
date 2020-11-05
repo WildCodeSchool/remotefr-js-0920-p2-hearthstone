@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Logo from '../assets/testlogo2.png';
 import './Header.css';
@@ -81,14 +82,14 @@ class Header extends React.Component {
               active ? 'nav-list-item-active' : 'nav-list-item-inactive'
             }
           >
-            <a
+            <Link
+              to="/tournament"
               className={
                 active ? 'nav-link-item-active' : 'nav-link-item-inactive'
               }
-              href="nav4.html"
             >
               Tournaments
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="search-bar">
