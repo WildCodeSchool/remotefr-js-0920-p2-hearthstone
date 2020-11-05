@@ -19,22 +19,7 @@ class Research extends React.Component {
 
           <section className="filters">
             <div className="class-card">
-              <form>
-                <select name="class" size="1">
-                  <option>Classes</option>
-                  <option>Demon hunter</option>
-                  <option>Druid</option>
-                  <option>Hunter</option>
-                  <option>Magus</option>
-                  <option>Paladin</option>
-                  <option>Priest</option>
-                  <option>Thief</option>
-                  <option>Shaman</option>
-                  <option>Warlock</option>
-                  <option>Warrior</option>
-                  <option>Neutral</option>
-                </select>
-              </form>
+              <p>Classes</p>
             </div>
 
             <div className="rarities">
@@ -58,7 +43,13 @@ class Research extends React.Component {
                   this.setState({ selected: manaSelected });
                 }}
               >
-                <p className={selected ? 'mana-selected' : 'mana'}>Mana</p>
+                <p className={selected ? 'mana-selected' : 'mana'}>1</p>
+                <p className={selected ? 'mana-selected' : 'mana'}>2</p>
+                <p className={selected ? 'mana-selected' : 'mana'}>3</p>
+                <p className={selected ? 'mana-selected' : 'mana'}>4</p>
+                <p className={selected ? 'mana-selected' : 'mana'}>5</p>
+                <p className={selected ? 'mana-selected' : 'mana'}>6</p>
+                <p className={selected ? 'mana-selected' : 'mana'}>7+</p>
               </button>
             </div>
           </section>
