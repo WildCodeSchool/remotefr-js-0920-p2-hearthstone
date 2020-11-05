@@ -59,11 +59,24 @@ function DisplayCard({ card }) {
   );
 }
 
-DisplayCard.propTypes = {
-  card: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    cost: PropTypes.number.isRequired,
-  }),
-};
+DisplayCard.propTypes = { name: PropTypes.string.isRequired };
+DisplayCard.propTypes = { playerClass: PropTypes.string.isRequired };
+DisplayCard.propTypes = { rarety: PropTypes.string.isRequired };
+DisplayCard.propTypes = { type: PropTypes.string.isRequired };
+DisplayCard.propTypes = { cost: PropTypes.number.isRequired };
+DisplayCard.propTypes = { attack: PropTypes.number.isRequired };
+DisplayCard.propTypes = { health: PropTypes.number.isRequired };
+DisplayCard.propTypes = { text: PropTypes.string.isRequired };
+DisplayCard.propTypes = { race: PropTypes.string.isRequired };
+DisplayCard.propTypes = { cardSet: PropTypes.string.isRequired };
+DisplayCard.propTypes = { flavor: PropTypes.string.isRequired };
+DisplayCard.propTypes = { artist: PropTypes.string.isRequired };
+
+// DisplayCard.propTypes = {
+//   card: PropTypes.shape({
+//      name: PropTypes.string.isRequired,
+//      cost: PropTypes.number.isRequired,
+//    }),
+//  };
 
 export default DisplayCard;
