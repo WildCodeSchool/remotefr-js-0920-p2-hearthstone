@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/testlogo2.png';
 import Cissou from '../assets/cycyrond.png';
 import Jtunus from '../assets/jujurond.png';
 import Pangolin from '../assets/vivirond.png';
-
-// import { Link } from 'react-router-dom';
+import AvatarCarteCyrille from '../assets/AvatarCarteCyrille.png';
+import AvatarCarteJustine from '../assets/AvatarCarteJustine.png';
+import AvatarCarteVivien from '../assets/AvatarCarteVivien.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -12,23 +14,29 @@ const Footer = () => {
     <footer>
       <div className="footer-container">
         <div className="logo-footer">
-          <a href="/">
+          <Link to="/">
             <img src={logo} alt="Logo Hearthstone" />
-          </a>
+          </Link>
         </div>
         <div className="links">
-          <a href="https://playhearthstone.com/fr-fr">Hearhstone</a>
+          <a href="https://playhearthstone.com/fr-fr">Hearthstone</a>
           <a href="https://www.blizzard.com/fr-fr/">Blizzard</a>
         </div>
         <div className="hidden-mobile team">
           <li>
-            <img src={Cissou} alt="Cyrille Fabre" title="Cyrille Fabre" />
-            <img src={Jtunus} alt="Justine Pain" title="Justine Pain" />
-            <img
-              src={Pangolin}
-              alt="Vivien Michelesi"
-              title="Vivien Michelesi"
-            />
+            <a href={AvatarCarteCyrille}>
+              <img src={Cissou} alt="Cyrille Fabre" title="Cyrille Fabre" />
+            </a>
+            <a href={AvatarCarteJustine}>
+              <img src={Jtunus} alt="Justine Pain" title="Justine Pain" />
+            </a>
+            <a href={AvatarCarteVivien}>
+              <img
+                src={Pangolin}
+                alt="Vivien Michelesi"
+                title="Vivien Michelesi"
+              />
+            </a>
           </li>
         </div>
         <div className="socialLinks-container">
