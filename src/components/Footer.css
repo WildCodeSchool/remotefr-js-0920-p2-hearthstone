@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pridi:wght@600&display=swap');
 
 /*================ Mobile - First ================ */
+
 /*************************
           Footer
 *************************/
+
 footer {
   font-family: 'Pridi', serif;
   font-size: 24px;
-  /* Color : wood
+  /* Color : wood */
   /* background-color: rgba(124, 81, 42, 0.7); */
   background: url(../assets/texture.jpg);
   background-size: cover;
