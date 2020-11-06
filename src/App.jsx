@@ -9,12 +9,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header active={false} />
       <Switch>
         <Route exact path="/">
-          <PagePrinc />
-        </Route>
-        <Route path="/tournament">
           <PagePrinc />
         </Route>
         <Route path="/research">

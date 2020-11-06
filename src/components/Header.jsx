@@ -14,13 +14,20 @@ class Header extends React.Component {
 
   render() {
     const { active } = this.state;
+    const navIsActive = active ? 'nav-list-active' : 'nav-list-inactive';
+    const navItemActive = active
+      ? 'nav-list-item-active'
+      : 'nav-list-item-inactive';
+    const navLinkActive = active
+      ? 'nav-link-item-active'
+      : 'nav-link-item-inactive';
     return (
       <nav className="header">
         <img className="logo" src={Logo} alt=" " />
         <h1 className="header-title">Hearthstone Finder</h1>
         <button
           type="button"
-          className="Rollmenu"
+          className="rollmenu"
           aria-label="Open the navbar"
           onClick={() => {
             const newRollMenu = !active;
@@ -31,63 +38,27 @@ class Header extends React.Component {
             ☰
           </span>
         </button>
-        <ul className={active ? 'nav-list-active' : 'nav-list-inactive'}>
-          <li
-            className={
-              active ? 'nav-list-item-active' : 'nav-list-item-inactive'
-            }
-          >
-            <Link
-              to="/research"
-              className={
-                active ? 'nav-link-item-active' : 'nav-link-item-inactive'
-              }
-            >
+        <ul className={navIsActive}>
+          <li className={navItemActive}>
+            <Link to="/research" className={navLinkActive}>
               Advanced search
             </Link>
           </li>
-          <li
-            className={
-              active ? 'nav-list-item-active' : 'nav-list-item-inactive'
-            }
-          >
-            <Link
-              to="/random"
-              className={
-                active ? 'nav-link-item-active' : 'nav-link-item-inactive'
-              }
-            >
+          <li className={navItemActive}>
+            <Link to="/random" className={navLinkActive}>
               Random card{' '}
               <span role="img" aria-label="emoji">
                 🎲
               </span>
             </Link>
           </li>
-          <li
-            className={
-              active ? 'nav-list-item-active' : 'nav-list-item-inactive'
-            }
-          >
-            <a
-              className={
-                active ? 'nav-link-item-active' : 'nav-link-item-inactive'
-              }
-              href="nav3.html"
-            >
+          <li className={navItemActive}>
+            <Link to="/deckbuilding" className={navLinkActive}>
               Deck building
-            </a>
+            </Link>
           </li>
-          <li
-            className={
-              active ? 'nav-list-item-active' : 'nav-list-item-inactive'
-            }
-          >
-            <Link
-              to="/tournament"
-              className={
-                active ? 'nav-link-item-active' : 'nav-link-item-inactive'
-              }
-            >
+          <li className={navItemActive}>
+            <Link to="/tournament" className={navLinkActive}>
               Tournaments
             </Link>
           </li>
