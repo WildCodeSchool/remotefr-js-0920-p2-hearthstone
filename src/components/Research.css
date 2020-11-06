@@ -56,6 +56,21 @@
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.mana-selected {
-  background-color: blue;
-}
+/* #class-demon-hunter,
+#class-druid,
+#class-hunter,
+#class-mage,
+#class-paladin,
+#class-priest,
+#class-rogue,
+#class-shaman,
+#class-warlock,
+#class-warrior,
+#class-neutral,
+#rarity-common,
+#rarity-free,
+#rarity-rare,
+#rarity-epic,
+#rarity-legendary {
+  display: none;
+} */
