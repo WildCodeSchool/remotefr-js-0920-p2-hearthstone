@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+  background-image: url(../assets/backgroundbody2.jpg);
+  background-size: auto;
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Berkshire Swash', cursive;
+  text-align: center;
+}
+
+.articles {
+  font-family: 'Roboto', sans-serif;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: justify;
+}
+
+.card_image {
+  text-align: center;
+}
+
+.Name {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.Class {
+  margin-bottom: 10px;
+}
+
+.Rarety {
+  margin-bottom: 10px;
+}
+
+.Mana-cost {
+  margin-bottom: 10px;
+}
+
+.Attack {
+  margin-bottom: 10px;
+}
+
+.Health {
+  margin-bottom: 10px;
+}
+
+.Effect {
+  margin-bottom: 10px;
+}
+
+/* ------ Desktop version ------ */
+
+@media only screen and (min-width: 1000px) {
+  /* ------ Gestion du grid ------ */
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 75px 75px 75px 75px 75px 75px 75px;
+    gap: 0% 15%;
+    grid-template-areas:
+      'Name card_image'
+      'Class card_image'
+      'Rarety card_image'
+      'Mana-cost card_image'
+      'Attack card_image'
+      'Health card_image'
+      'Effect card_image';
+    align-items: center;
+  }
+
+  .card_image {
+    grid-area: card_image;
+  }
+
+  .Name {
+    grid-area: Name;
+  }
+
+  .Class {
+    grid-area: Class;
+  }
+
+  .Rarety {
+    grid-area: Rarety;
+  }
+
+  .Mana-cost {
+    grid-area: Mana-cost;
+  }
+
+  .Attack {
+    grid-area: Attack;
+  }
+
+  .Health {
+    grid-area: Health;
+  }
+
+  .Effect {
+    grid-area: Effect;
+  }
+}
