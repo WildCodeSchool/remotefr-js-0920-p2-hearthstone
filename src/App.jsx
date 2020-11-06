@@ -1,22 +1,23 @@
 import React from 'react';
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Articles from './components/Articles';
-import Research from './components/Research';
+import PagePrinc from './components/PagePrinc';
+// import Research from './components/Research';
 import './App.css';
-
-// import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
+    // <Router>
     <div className="App">
       <Header active={false} />
-      <Articles />;{/* <Switch>
-        <Route path="" />
-      </Switch> */}
-      <Research />
+
+      <PagePrinc />
+      {/* <Research /> */}
+
       <Footer />
     </div>
+    // </Router>
   );
 }
 
