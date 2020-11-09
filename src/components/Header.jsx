@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Logo from '../assets/testlogo2.png';
 import './Header.css';
@@ -13,13 +14,22 @@ class Header extends React.Component {
 
   render() {
     const { active } = this.state;
+    const navIsActive = active ? 'nav-list-active' : 'nav-list-inactive';
+    const navItemActive = active
+      ? 'nav-list-item-active'
+      : 'nav-list-item-inactive';
+    const navLinkActive = active
+      ? 'nav-link-item-active'
+      : 'nav-link-item-inactive';
     return (
       <nav className="header">
-        <img className="logo" src={Logo} alt=" " />
+        <Link to="/">
+          <img className="logo" src={Logo} alt=" " />
+        </Link>
         <h1 className="header-title">Hearthstone Finder</h1>
         <button
           type="button"
-          className="Rollmenu"
+          className="rollmenu"
           aria-label="Open the navbar"
           onClick={() => {
             const newRollMenu = !active;
@@ -30,65 +40,29 @@ class Header extends React.Component {
             ☰
           </span>
         </button>
-        <ul className={active ? 'nav-list-active' : 'nav-list-inactive'}>
-          <li
-            className={
-              active ? 'nav-list-item-active' : 'nav-list-item-inactive'
-            }
-          >
-            <a
-              className={
-                active ? 'nav-link-item-active' : 'nav-link-item-inactive'
-              }
-              href="nav1.html"
-            >
+        <ul className={navIsActive}>
+          <li className={navItemActive}>
+            <Link to="/research" className={navLinkActive}>
               Advanced search
-            </a>
+            </Link>
           </li>
-          <li
-            className={
-              active ? 'nav-list-item-active' : 'nav-list-item-inactive'
-            }
-          >
-            <a
-              className={
-                active ? 'nav-link-item-active' : 'nav-link-item-inactive'
-              }
-              href="nav2.html"
-            >
+          <li className={navItemActive}>
+            <Link to="/random" className={navLinkActive}>
               Random card{' '}
               <span role="img" aria-label="emoji">
                 🎲
               </span>
-            </a>
+            </Link>
           </li>
-          <li
-            className={
-              active ? 'nav-list-item-active' : 'nav-list-item-inactive'
-            }
-          >
-            <a
-              className={
-                active ? 'nav-link-item-active' : 'nav-link-item-inactive'
-              }
-              href="nav3.html"
-            >
+          <li className={navItemActive}>
+            <Link to="/deckbuilding" className={navLinkActive}>
               Deck building
-            </a>
+            </Link>
           </li>
-          <li
-            className={
-              active ? 'nav-list-item-active' : 'nav-list-item-inactive'
-            }
-          >
-            <a
-              className={
-                active ? 'nav-link-item-active' : 'nav-link-item-inactive'
-              }
-              href="nav4.html"
-            >
+          <li className={navItemActive}>
+            <Link to="/tournament" className={navLinkActive}>
               Tournaments
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="search-bar">

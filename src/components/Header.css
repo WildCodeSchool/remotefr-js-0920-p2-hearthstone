@@ -23,6 +23,7 @@
   font-family: 'Berkshire Swash', cursive;
   text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px,
     #000000 2px -2px;
+
   text-align: center;
   color: #f2cd61;
   font-size: 25px;
@@ -33,27 +34,28 @@
 
 .logo {
   display: flex;
-  height: 55px;
+  height: 75px;
   margin: 8px;
 }
 
 /* ------ Desktop version ------ */
 
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 1024px) {
   .header {
+    height: 22em;
     position: relative;
     display: flex;
     background-size: cover;
-    height: 22em;
   }
 
   .header-title {
     font-family: 'Berkshire Swash', cursive;
     color: #f2cd61;
-    font-size: 460%;
+    font-size: 470%;
 
     padding-bottom: 110px;
-    padding-left: 3%;
+    padding-left: 15%;
+    padding-right: 8%;
   }
 
   .logo {
@@ -69,19 +71,22 @@
 
 /* ------ Mobile version ------ */
 
-.Rollmenu {
+.rollmenu {
   display: flex;
   justify-content: flex-end;
-  color: #62c9fa;
-  text-decoration: none;
-  background-color: #333;
   padding: 7px 14px;
-  border-radius: 5px;
-  border: 1px solid black;
-  font-size: 13px;
-  cursor: pointer;
   margin-right: 10px;
   max-height: 100;
+
+  color: #62c9fa;
+  background-color: #333;
+
+  border-radius: 5px;
+  border: 1px solid #f2cd61;
+  cursor: pointer;
+
+  text-decoration: none;
+  font-size: 13px;
 }
 
 .nav-list-inactive {
@@ -101,10 +106,10 @@
   position: relative;
   display: flex;
   justify-content: center;
-
-  background-color: rgba(98, 201, 249, 0.97);
-  transition: filter 400ms;
   padding: 10px 20px;
+
+  background-color: rgba(131, 216, 255, 0.97);
+  transition: filter 400ms;
 
   font-size: 20px;
   font-family: 'Pridi', serif;
@@ -117,26 +122,30 @@
 
 /* ------ Desktop version ------ */
 
-@media only screen and (min-width: 770px) {
-  .Rollmenu {
+@media only screen and (min-width: 1024px) {
+  .rollmenu {
     display: none;
   }
 
   .nav-list-active,
   .nav-list-inactive {
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    position: absolute;
-    background-image: url(../assets/texture.jpg);
-    background-size: cover;
-
-    filter: opacity(0.9);
-
     height: 20%;
     margin-top: 297px;
 
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+
+    background-image: url(../assets/texture.jpg);
+    background-size: cover;
+    filter: opacity(0.9);
+
     list-style-type: none;
+  }
+
+  ul {
+    padding-inline-start: 0;
   }
 
   .nav-list-item-active,
@@ -144,17 +153,13 @@
     display: block;
     padding-top: 17px;
 
-    /* background-color: rgba(98, 201, 249, 0.63);
-    transition: filter 400ms; */
-
     font-size: 20px;
     font-family: 'Pridi', serif;
+    background-color: unset;
   }
 
   .nav-list-item-active:hover,
   .nav-list-item-inactive:hover {
-    /* background-color: rgb(98, 201, 249); */
-
     border-bottom: solid 6px rgb(98, 201, 249);
     filter: drop-shadow(3px 3px 8px rgba(98, 201, 249, 0.671));
     transition: filter 200ms;
@@ -165,11 +170,12 @@
   .nav-link-item:visited,
   .nav-link-item-active,
   .nav-link-item-inactive {
-    color: white;
-    text-decoration: none;
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 5px;
+
+    color: white;
+    text-decoration: none;
   }
 }
 
@@ -185,32 +191,33 @@
 
 /* ------ Desktop version ------ */
 
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 1024px) {
   .search-bar {
     display: contents;
     display: flex;
     justify-content: flex-end;
 
-    margin-right: 0%;
+    margin-right: 6%;
     margin-bottom: 1%;
   }
 
   #search {
     width: 200px;
     height: 30px;
+
     border-radius: 20px;
   }
 
   #search-button {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    margin-left: 0.5em;
+
     background-color: rgba(98, 201, 249, 0.514);
     border-radius: 30%;
     border-width: 5px;
     border-color: rgba(98, 201, 249, 0.514);
     transition: filter 300ms;
-
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-    margin-left: 0.5em;
   }
 
   #search-button:hover {
