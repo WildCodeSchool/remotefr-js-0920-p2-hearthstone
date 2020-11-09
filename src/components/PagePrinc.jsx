@@ -5,7 +5,7 @@ import zephrysEN from '../assets/zephrysEN.png';
 const PagePrinc = () => {
   return (
     <div className="articles">
-      <div className="firstArticle">
+      <blockquote className="firstArticle">
         <h1 className="titleFirstArticle">Game Introduction</h1>
         <p>
           {`Hearthstone is a free-to-play online digital collectible card game developed and published by Blizzard Entertainment. Hearthstone based upon the existing lore of the Warcraft series by using the same elements, characters, and relics. It was first released for Microsoft Windows and macOS in March 2014, with ports for iOS and Android releasing later that year. Game includes a cross-platform play, allowing players on any supported device to compete with another. 
@@ -22,8 +22,8 @@ const PagePrinc = () => {
           has several formats, including casual and ranked matches,
           drafted arena battles, and single-player adventures.`}
         </p>
-      </div>
-      <div className="secondArticle">
+      </blockquote>
+      <blockquote className="secondArticle">
         <h1 className="titleSecondArticle">Card Analysis</h1>
         <p>
           Cards are the basic pieces of Hearthstone. Each one defines an action
@@ -65,7 +65,7 @@ const PagePrinc = () => {
             <strong>Effect:</strong> Some cards have a battlefield effect.
           </article>
         </div>
-      </div>
+      </blockquote>
     </div>
   );
 };
