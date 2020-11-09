@@ -23,7 +23,9 @@ class Header extends React.Component {
       : 'nav-link-item-inactive';
     return (
       <nav className="header">
-        <img className="logo" src={Logo} alt=" " />
+        <Link to="/">
+          <img className="logo" src={Logo} alt=" " />
+        </Link>
         <h1 className="header-title">Hearthstone Finder</h1>
         <button
           type="button"
