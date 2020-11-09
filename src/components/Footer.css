@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pridi:wght@600&display=swap');
 
 /*================ Mobile - First ================ */
+
 /*************************
           Footer
 *************************/
+
 footer {
   font-family: 'Pridi', serif;
   font-size: 24px;
-  /* Color : wood
+  /* Color : wood */
   /* background-color: rgba(124, 81, 42, 0.7); */
   background: url(../assets/texture.jpg);
   background-size: cover;
@@ -19,17 +20,13 @@ footer {
   display: flex;
   align-items: center;
   max-height: 220px;
-  max-width: 2400px;
 }
 
 /* Positioning all items inside footer */
 
 .footer-container > div {
   flex: auto;
-  justify-content: space-around;
-}
-.footer-container ul {
-  list-style: none;
+  justify-content: space-evenly;
 }
 .footer-container a {
   text-decoration: none;
@@ -44,12 +41,12 @@ footer {
   width: 20px;
 }
 .logo-footer a {
-  /* display: flex; */
   justify-content: space-around;
 }
 .logo-footer img {
   width: 130px;
-  height: 90px;
+  /* height: 90px; */
+  height: auto;
 }
 footer li {
   margin: 0;
@@ -65,10 +62,9 @@ footer li {
 }
 .links {
   margin: 0.25em auto;
+  align-items: center;
 }
-.links a:hover {
-  text-decoration: underline;
-}
+
 /* Social Networks : Ytb / Twitter */
 .socialLinks {
   margin-top: 1em;
@@ -101,16 +97,23 @@ footer li {
 /*********************************
     Reponsive Media (Desktop > 1024px)
 **********************************/
-@media screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .links {
     display: flex;
     flex-direction: column;
-    margin-top: 0.5em;
+    align-items: center;
+    margin: 15px 0;
+  }
+  .links a:hover {
+    border-bottom: solid 2px rgb(98, 201, 249);
+    filter: drop-shadow(3px 3px 8px rgba(98, 201, 249, 0.671));
+    transition: filter 200ms;
   }
   .logo-footer {
-    padding-top: 2%;
+    margin-top: 24px;
     height: auto;
     width: 250px;
+    padding: 0;
   }
   .logo-footer img {
     height: 150px;
@@ -130,9 +133,13 @@ footer li {
   .team img:hover {
     filter: none;
   }
+  .footer-container a {
+    display: inline;
+  }
   .socialLinks-container {
     margin: 12px 0;
     height: auto;
+    align-items: flex-end;
   }
   .socialLinks-container img {
     width: 100px;
@@ -141,7 +148,6 @@ footer li {
   }
   .socialLinks-container a {
     display: flex;
-    /* justify-content: space-between; */
   }
 }
 /*************************************
