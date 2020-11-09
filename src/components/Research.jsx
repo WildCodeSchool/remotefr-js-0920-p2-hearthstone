@@ -1,53 +1,43 @@
 import React from 'react';
-import Filter from './Filters';
+import PropTypes from 'prop-types';
+import Filters from './Filters';
 import Catalogue from './Catalogue';
 
 import './Research.css';
 
 class Research extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      cards: [
-        {
-          id: 1,
-          name: 'Jongleuse de lames',
-          rarity: 'rare',
-          mana: '6',
-          class: 'demon-hunter',
-        },
-        {
-          id: 2,
-          name: 'Whatley, maître de la piste',
-          rarity: 'légendaire',
-          mana: '5',
-          class: 'warrior',
-        },
-        {
-          id: 3,
-          name: 'Griffon du manège',
-          rarity: 'common',
-          mana: '5',
-          class: 'paladin',
-        },
-      ],
+      cards: props.singleCard,
+      id: props.singleCard.id,
     };
   }
 
   render() {
     const title = 'Advanced Research';
-    const { cards } = this.state;
+    const { cards, id } = this.state;
 
     return (
       <div>
         <h1>{title}</h1>
-        <Filter />
+        <Filters />
         {cards.map((card) => (
-          <Catalogue details={card} />
+          <Catalogue key={id} details={card} />
         ))}
       </div>
     );
   }
 }
+
+Research.propTypes = {
+  singleCard: PropTypes.arrayOf({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    rarity: PropTypes.string.isRequired,
+    mana: PropTypes.number.isRequired,
+    class: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default Research;

@@ -4,7 +4,7 @@ import FilterClass from './FilterClass';
 import FilterMana from './FilterMana';
 import FilterRarity from './FilterRarity';
 
-class Filter extends Component {
+class Filters extends Component {
   render() {
     return () => {
       <div>
@@ -17,4 +17,4 @@ class Filter extends Component {
   }
 }
 
-export default Filter;
+export default Filters;

@@ -6,6 +6,30 @@ import PagePrinc from './components/PagePrinc';
 import Research from './components/Research';
 import './App.css';
 
+const cards = [
+  {
+    id: 1,
+    name: 'Jongleuse de lames',
+    rarity: 'rare',
+    mana: '6',
+    class: 'demon-hunter',
+  },
+  {
+    id: 2,
+    name: 'Whatley, maître de la piste',
+    rarity: 'légendaire',
+    mana: '5',
+    class: 'warrior',
+  },
+  {
+    id: 3,
+    name: 'Griffon du manège',
+    rarity: 'common',
+    mana: '5',
+    class: 'paladin',
+  },
+];
+
 function App() {
   return (
     <div className="App">
@@ -15,7 +39,7 @@ function App() {
           <PagePrinc />
         </Route>
         <Route path="/research">
-          <Research />
+          <Research singleCard={cards} />
         </Route>
       </Switch>
       <Footer />
