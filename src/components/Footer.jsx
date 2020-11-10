@@ -25,8 +25,6 @@ const Footer = ({ avatar, socialNetwork, websiteUrl }) => {
         <div className="links">
           <OfficialWebsites name={websiteUrl[0].name} url={websiteUrl[0].url} />
           <OfficialWebsites name={websiteUrl[1].name} url={websiteUrl[1].url} />
-          {/* <a href="https://playhearthstone.com/fr-fr">Hearthstone</a>
-          <a href="https://www.blizzard.com/fr-fr/">Blizzard</a> */}
         </div>
         <div className="hidden-mobile team">
           <li>
