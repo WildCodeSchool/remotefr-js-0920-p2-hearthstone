@@ -10,20 +10,18 @@ class Research extends React.Component {
     super(props);
     this.state = {
       cards: props.singleCard,
-      id: props.singleCard.id,
     };
   }
 
   render() {
     const title = 'Advanced Research';
-    const { cards, id } = this.state;
-
+    const { cards } = this.state;
     return (
       <div>
         <h1>{title}</h1>
-        <Filters />
+        <Filters singleCard={cards} />
         {cards.map((card) => (
-          <Catalogue key={id} details={card} />
+          <Catalogue key={card.id} singleCard={card} />
         ))}
       </div>
     );

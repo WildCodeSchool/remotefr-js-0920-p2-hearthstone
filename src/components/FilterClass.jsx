@@ -19,7 +19,7 @@ class FilterClass extends Component {
   render() {
     return (
       <div className="filterClassContainer">
-        <h2>All classes</h2>
+        <h2>FilterClass</h2>
         <ul>
           <li>Demon Hunter</li>
           <li>Druid</li>

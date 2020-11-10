@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class FilterRarity extends Component {
+class FilterRarity extends PureComponent {
   render() {
-    return () => {
+    return (
       <div>
-        <h1>Research with card name</h1>
+        <h1>FilterRarity</h1>
         <p>Please enter the card name</p>
-      </div>;
-    };
+      </div>
+    );
   }
 }
 

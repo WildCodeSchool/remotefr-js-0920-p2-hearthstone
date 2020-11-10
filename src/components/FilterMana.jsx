@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class FilterMana extends Component {
+class FilterMana extends PureComponent {
   render() {
-    return () => {
+    return (
       <div>
-        <h1>Research with card name</h1>
+        <h1>FilterMana</h1>
         <p>Please enter the card name</p>
-      </div>;
-    };
+      </div>
+    );
   }
 }
 
