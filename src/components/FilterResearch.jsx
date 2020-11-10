@@ -7,7 +7,7 @@ class FilterResearch extends Component {
     super(props);
     this.state = {
       inputValue: '',
-      cards: props.singleCard,
+      cards: props.singleCard, // cards = Tableau d'objets Cartes (3 objets)
     };
   }
 
@@ -20,18 +20,23 @@ class FilterResearch extends Component {
     event.preventDefault();
   };
 
+  getFilteredCards = () => {
+    const { cards, inputValue } = this.state;
+    return inputValue === ''
+      ? cards
+      : cards.filter((card) => card.name.includes(inputValue));
+  };
+
+  // inputValue = filterName , filteredValues = filteredPokemons, cards = pokemons
+
   render() {
-    const { inputValue, cards } = this.state;
-    let filteredValues;
-    if (inputValue === '') {
-      filteredValues = inputValue;
-    } else {
-      filteredValues = cards.filter((card) => card.name.includes(inputValue));
-    }
+    const { inputValue } = this.state;
+    const filteredValues = this.getFilteredCards();
+    const { handleSubmit, handleChange } = this;
 
     return (
       <div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="search">
             <h1>FilterResearch</h1>
             <p>Please enter the card name</p>
@@ -40,7 +45,7 @@ class FilterResearch extends Component {
               id="search"
               placeholder="Find a card"
               type="text"
-              onChange={this.handleChange}
+              onChange={handleChange}
             />
           </label>
           <button type="button" id="search-button">

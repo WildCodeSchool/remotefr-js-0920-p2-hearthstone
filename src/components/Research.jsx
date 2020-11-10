@@ -21,7 +21,7 @@ class Research extends React.Component {
         <h1>{title}</h1>
         <Filters singleCard={cards} />
         {cards.map((card) => (
-          <Catalogue key={card.id} singleCard={card} />
+          <Catalogue key={card.id} singleCard={card.name} />
         ))}
       </div>
     );

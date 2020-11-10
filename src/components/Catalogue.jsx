@@ -11,10 +11,10 @@ class Catalogue extends Component {
 
   render() {
     const { cards } = this.state;
+
     return (
       <div>
-        <h1>Cartes Recherche</h1>
-        <div>{cards.name}</div>
+        <div>{cards}</div>
       </div>
     );
   }
