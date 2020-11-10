@@ -15,8 +15,8 @@ function DisplayCard({ card }) {
           {card.playerClass}
         </li>
         <li>
-          <strong>Rarety:</strong>
-          {card.rarety}
+          <strong>Rarity:</strong>
+          {card.rarity}
         </li>
         <li>
           <strong>Type:</strong>
@@ -63,7 +63,7 @@ DisplayCard.propTypes = {
   card: PropTypes.shape({
     name: PropTypes.string.isRequired,
     playerClass: PropTypes.string.isRequired,
-    rarety: PropTypes.string.isRequired,
+    rarity: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     cost: PropTypes.number.isRequired,
     attack: PropTypes.number.isRequired,
