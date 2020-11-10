@@ -35,11 +35,10 @@ class FilterResearch extends Component {
     const { handleSubmit, handleChange } = this;
 
     return (
-      <div>
+      <div className="name-research">
         <form onSubmit={handleSubmit}>
           <label htmlFor="search">
-            <h1>FilterResearch</h1>
-            <p>Please enter the card name</p>
+            <h2>Filter by card name</h2>
             <input
               value={inputValue}
               id="search"

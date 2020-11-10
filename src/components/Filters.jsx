@@ -17,7 +17,7 @@ class Filters extends Component {
     const { cards } = this.state;
 
     return (
-      <div>
+      <div className="filters">
         <FilterResearch singleCard={cards} />
         <FilterClass />
         <FilterMana />

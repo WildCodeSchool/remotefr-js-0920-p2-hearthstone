@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ClassDruidImage from '../assets/Filters-images/druid-unchecked.png';
 
 class FilterClass extends Component {
   constructor(props) {
@@ -19,20 +20,10 @@ class FilterClass extends Component {
   render() {
     return (
       <div className="filterClassContainer">
-        <h2>FilterClass</h2>
-        <ul>
-          <li>Demon Hunter</li>
-          <li>Druid</li>
-          <li>Hunter</li>
-          <li>Mage</li>
-          <li>Paladin</li>
-          <li>Priest</li>
-          <li>Rogue</li>
-          <li>Shaman</li>
-          <li>Warlock</li>
-          <li>Warrior</li>
-          <li>Neutral</li>
-        </ul>
+        <h2>Filter by class</h2>
+        <div>
+          <img className="demon-hunter-filter" src={ClassDruidImage} alt=" " />
+        </div>
       </div>
     );
   }

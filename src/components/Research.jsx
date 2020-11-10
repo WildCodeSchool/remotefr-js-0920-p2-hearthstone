@@ -18,11 +18,13 @@ class Research extends React.Component {
     const { cards } = this.state;
     return (
       <div>
-        <h1>{title}</h1>
-        <Filters singleCard={cards} />
-        {cards.map((card) => (
-          <Catalogue key={card.id} singleCard={card.name} />
-        ))}
+        <div className="research-content">
+          <h1>{title}</h1>
+          <Filters singleCard={cards} />
+          {cards.map((card) => (
+            <Catalogue key={card.id} singleCard={card.name} />
+          ))}
+        </div>
       </div>
     );
   }
