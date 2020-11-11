@@ -23,7 +23,7 @@
   padding: 5%;
   margin: 3%;
 
-  background-image: url(../assets/texturepapier.png);
+  /* background-image: url(../assets/texturepapier.png); */
   background-size: cover;
   filter: opacity(0.9);
 }

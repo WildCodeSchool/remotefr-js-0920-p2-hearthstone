@@ -1,95 +1,100 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
+// import React from 'react';
+// import { withRouter } from 'react-router-dom';
+// import PropTypes from 'prop-types';
+// import axios from 'axios';
 
-class SearchName extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: '',
-    };
-  }
+// class SearchName extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       card: {}
+//       loading: true
+//     };
+//   }
 
-  handleChange = (event) => {
-    this.setState({ value: event.target.value });
-  };
+//   componentDidUpdate(prevProps) {
+//     if (this.props.location.pathname !== prevProps.location.pathname) {
+//       this.setState({ loading: true });
+//       this.getCard();
+//     }
+//   }
 
-  handleSubmit = (event) => {
-    const { history } = this.props;
-    const { value } = this.state;
-    history.push(`/use/${value}`);
-    event.preventDefault();
-  };
+//   componentDidMount = () => {
+//     this.getCards();
+//   };
 
-  render() {
-    const { value } = this.state;
-    return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            id="cardName"
-            value={value}
-            onChange={this.handleChange}
-            placeholder="Find a card"
-          />
-          <button type="button" id="search-button">
-            <span role="img" aria-label="emoji" id="emoji">
-              🔍
-            </span>
-          </button>
-        </form>
-      </div>
-    );
-  }
-}
+//   getCards = async () => {
+//     const {
+//       match: {
+//         params: { name },
+//       },
+//     } = this.props;
+//     this.setState[{card:[]}];
 
-SearchName.propTypes = {
-  history: PropTypes.shape({
-    push: PropTypes.func.isRequired,
-  }).isRequired,
-};
+//     let options = {
+//       method: "GET",
+//       url: `https://api-hearthstone.woozy.fr/v1/cards/single/id/${this.props.match.params.id}`
+//     };
 
-export default withRouter(SearchName);
+//    const result = await axios
+//       .request(options)
+//       .then(function (response) {
+//         console.log(response.data);
+//         return response.data;
+//       })
+//       .catch(function (error) {
+//         console.error(error);
+//       });
 
-//   // componentDidMount() {
-//   //   this.getCards();
-//   // }
+//     this.setState({ loading: false });
+//     this.setState({ card: result });
+//   };
 
-//   // getCards = async () => {
-//   //   let options = {
-//   //     method: 'GET',
-//   //     url: 'http://api-hearthstone.woozy.fr/v1/cards/single/id/3'
-//   //   };
+//   // handleChange = (event) => {
+//   //   this.setState({ value: event.target.value });
+//   // };
 
-//   //   axios.request(options).then(function (response) {
-//   //     console.log(response.data);
-//   //   }).catch(function (error) {
-//   //     console.error(error);
-//   //   });
+//   // handleSubmit = (event) => {
+//   //   const { history } = this.props;
+//   //   const { value } = this.state;
+//   //   history.push(
+//   //     `/https://api-hearthstone.woozy.fr/v1/cards/single/id/${value}`,
+//   //   );
+//   //   event.preventDefault();
+//   // };
 
-// //     const myData = await axios.request(options).then(DisplayCard (response) {
-// //       // return (response.data[0]);
-// //       console.log(response.data[0]);
-// //     });
+//   render() {
+//     const { card, loading} = this.state;
+//     return (
+//       <div>
+//         <form onSubmit={this.handleSubmit}>
+//           <input
+//             type="text"
+//             id="cardName"
+//             value={value}
+//             onChange={this.handleChange}
+//             placeholder="Find a card"
+//           />
+//           <button type="button" id="search-button">
+//             <span role="img" aria-label="emoji" id="emoji">
+//               🔍
+//             </span>
+//           </button>
+//         </form>
+//       </div>
+//     );
+//   }
+// }
 
-// //     this.setState({ items: myData });
-// //   };
+// SearchName.propTypes = {
+//   history: PropTypes.shape({
+//     push: PropTypes.func.isRequired,
+//   }).isRequired,
+//   match: PropTypes.shape({
+//     params: PropTypes.shape({
+//       name: PropTypes.string.isRequired,
+//     }).isRequired,
+//   }).isRequired,
+// };
 
-// //   render = () => {
-// //     const { name, rarity, img } = this.state.items;
-
-// //     console.log(img);
-// //     return (
-// //       <div>
-// //         <h1>{name}</h1>
-// //         <img
-// //           src="https://media.services.zam.com/v1/media/byName/hs/cards/enus/DS1_175.png"
-// //           alt="coucou"
-// //         />
-// //       </div>
-// //     );
-// //   };
-// // }
-
-// // export default SearchName;
+// export default withRouter(SearchName);
