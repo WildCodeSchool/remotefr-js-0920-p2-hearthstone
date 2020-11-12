@@ -1,35 +1,112 @@
-import React, { PureComponent } from 'react';
-import Mana0Filter from '../assets/Filters-images/mana0-unchecked.png';
-import Mana1Filter from '../assets/Filters-images/mana1-unchecked.png';
-import Mana2Filter from '../assets/Filters-images/mana2-unchecked.png';
-import Mana3Filter from '../assets/Filters-images/mana3-unchecked.png';
-import Mana4Filter from '../assets/Filters-images/mana4-unchecked.png';
-import Mana5Filter from '../assets/Filters-images/mana5-unchecked.png';
-import Mana6Filter from '../assets/Filters-images/mana6-unchecked.png';
-import Mana7Filter from '../assets/Filters-images/mana7-unchecked.png';
-import Mana8Filter from '../assets/Filters-images/mana8-unchecked.png';
-import Mana9Filter from '../assets/Filters-images/mana9-unchecked.png';
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import RarityCommonFilter from '../assets/Filters-images/common.png';
+import RarityEpicFilter from '../assets/Filters-images/epic.png';
+import RarityFreeFilter from '../assets/Filters-images/free.png';
+import RarityLegendaryFilter from '../assets/Filters-images/legendary.png';
+import RarityRareFilter from '../assets/Filters-images/rare.png';
 
-class FilterRarity extends PureComponent {
+class FilterRarity extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isChecked: false,
+    };
+  }
+
+  handleClickChecked = () => {
+    const { isChecked } = this.state;
+    this.setState({
+      isChecked: !isChecked,
+    });
+  };
+
   render() {
+    const { cardRarity, handleSelectRarity } = this.props;
     return (
-      <div>
+      <div className="rarity-filter-container">
         <h2>Filter by rarity</h2>
         <div>
-          <img className="mana-filter" src={Mana0Filter} alt=" " />
-          <img className="mana-filter" src={Mana1Filter} alt=" " />
-          <img className="mana-filter" src={Mana2Filter} alt=" " />
-          <img className="mana-filter" src={Mana3Filter} alt=" " />
-          <img className="mana-filter" src={Mana4Filter} alt=" " />
-          <img className="mana-filter" src={Mana5Filter} alt=" " />
-          <img className="mana-filter" src={Mana6Filter} alt=" " />
-          <img className="mana-filter" src={Mana7Filter} alt=" " />
-          <img className="mana-filter" src={Mana8Filter} alt=" " />
-          <img className="mana-filter" src={Mana9Filter} alt=" " />
+          <button
+            type="button"
+            className="transparent-btn"
+            onClick={() => handleSelectRarity('free')}
+          >
+            <p>Free</p>
+            <img
+              className={classNames('rarity-filter', {
+                'rarity-filter-selected': cardRarity === 'free',
+              })}
+              src={RarityFreeFilter}
+              alt="Free rarity icon"
+            />
+          </button>
+          <button
+            type="button"
+            className="transparent-btn"
+            onClick={() => handleSelectRarity('common')}
+          >
+            <p>Common</p>
+            <img
+              className={classNames('rarity-filter', {
+                'rarity-filter-selected': cardRarity === 'common',
+              })}
+              src={RarityCommonFilter}
+              alt="Common rarity icon"
+            />
+          </button>
+          <button
+            type="button"
+            className="transparent-btn"
+            onClick={() => handleSelectRarity('rare')}
+          >
+            <p>Rare</p>
+            <img
+              className={classNames('rarity-filter', {
+                'rarity-filter-selected': cardRarity === 'rare',
+              })}
+              src={RarityRareFilter}
+              alt="Rare rarity icon"
+            />
+          </button>
+          <button
+            type="button"
+            className="transparent-btn"
+            onClick={() => handleSelectRarity('epic')}
+          >
+            <p>Epic</p>
+            <img
+              className={classNames('rarity-filter', {
+                'rarity-filter-selected': cardRarity === 'epic',
+              })}
+              src={RarityEpicFilter}
+              alt="Epic rarity icon"
+            />
+          </button>
+          <button
+            type="button"
+            className="transparent-btn"
+            onClick={() => handleSelectRarity('legendary')}
+          >
+            <p>Legendary</p>
+            <img
+              className={classNames('rarity-filter', {
+                'rarity-filter-selected': cardRarity === 'legendary',
+              })}
+              src={RarityLegendaryFilter}
+              alt="Legendary rarity icon"
+            />
+          </button>
         </div>
       </div>
     );
   }
 }
+
+FilterRarity.propTypes = {
+  cardRarity: PropTypes.string.isRequired,
+  handleSelectRarity: PropTypes.string.isRequired,
+};
 
 export default FilterRarity;

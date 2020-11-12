@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Filters from './Filters';
+
+import FilterResearch from './FilterResearch';
+import FilterClass from './FilterClass';
+import FilterMana from './FilterMana';
+import FilterRarity from './FilterRarity';
 import Catalogue from './Catalogue';
 
 import './Research.css';
@@ -10,20 +14,55 @@ class Research extends React.Component {
     super(props);
     this.state = {
       cards: props.singleCard,
+      cardMana: -1,
+      cardClass: '',
+      cardRarity: '',
     };
   }
 
+  // lancer l'appel API avec tous les criteres
+  fetchData = () => {};
+
+  handleSelectClass = (newCardClass) => {
+    // setState prend un 2eme argument optionnel : un callback
+    // seulement si vous voulez faire recherche temps reel
+    this.setState({ cardClass: newCardClass }, this.fetchData);
+  };
+
+  handleSelectRarity = (newCardRarity) => {
+    this.setState({ cardRarity: newCardRarity }, this.fetchData);
+  };
+
+  handleSelectMana = (newCardMana) => {
+    this.setState({ cardMana: newCardMana }, this.fetchData);
+  };
+
   render() {
     const title = 'Advanced Research';
-    const { cards } = this.state;
+    const { cards, cardClass, cardRarity, cardMana } = this.state;
     return (
       <div>
         <div className="research-content">
           <h1>{title}</h1>
-          <Filters singleCard={cards} />
+          <FilterResearch />
+          <FilterClass
+            cardClass={cardClass}
+            handleSelectClass={this.handleSelectClass}
+          />
+          <FilterMana
+            cardMana={cardMana}
+            handleSelectMana={this.handleSelectMana}
+          />
+          <FilterRarity
+            cardRarity={cardRarity}
+            handleSelectRarity={this.handleSelectRarity}
+          />
           {cards.map((card) => (
             <Catalogue key={card.id} singleCard={card.name} />
           ))}
+          <button type="button" onClick={this.fetchData}>
+            Search
+          </button>
         </div>
       </div>
     );
