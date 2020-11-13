@@ -51,18 +51,6 @@
   font-family: 'Berkshire Swash', cursive;
 }
 
-#filter-research-button {
-  background-image: url('https://cdn.hipwallpaper.com/i/33/17/wW6Xit.jpg');
-  max-width: 50%;
-  margin-left: 25%;
-  font-family: 'Pridi', serif;
-}
-
-#filter-research-button:hover {
-  background-color: #62c9fa;
-  background-image: none;
-  outline: 0;
-}
 /* ------ Desktop version ------ */
 
 .research-content h1 {
@@ -104,7 +92,24 @@
 }
 
 #card-filter-search {
+  cursor: pointer;
+  border-radius: 20px;
   width: 50%;
+  height: 25px;
+  font-weight: bold;
+  background-color: #331f0c;
+  color: #f2cd61;
+  border-color: #6e5e2e;
+}
+
+#card-filter-search:focus {
+  outline: 0;
+}
+
+#card-filter-search::placeholder {
+  padding-left: 10px;
+  color: #f2cd61;
+  font-family: Pridi, serif;
 }
 
 /* CLASSES */
@@ -121,6 +126,7 @@
   display: flex;
   width: 50px;
   padding: 2px;
+  cursor: pointer;
   filter: saturate(0%) brightness(200%);
 }
 
@@ -142,6 +148,7 @@
   display: flex;
   width: 40px;
   padding: 2px;
+  cursor: pointer;
 }
 
 .mana-filter:hover {
@@ -170,6 +177,7 @@
   padding-left: 5px;
   padding-right: 5px;
   width: 50px;
+  cursor: pointer;
 }
 
 .rarity-filter:hover {

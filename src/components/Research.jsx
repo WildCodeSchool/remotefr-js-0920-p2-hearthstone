@@ -5,7 +5,6 @@ import FilterName from './FilterName';
 import FilterClass from './FilterClass';
 import FilterMana from './FilterMana';
 import FilterRarity from './FilterRarity';
-import Catalogue from './Catalogue';
 
 import './Research.css';
 
@@ -57,16 +56,6 @@ class Research extends React.Component {
             cardRarity={cardRarity}
             handleSelectRarity={this.handleSelectRarity}
           />
-          {cards.map((card) => (
-            <Catalogue key={card.id} singleCard={card.name} />
-          ))}
-          <button
-            id="filter-research-button"
-            type="button"
-            onClick={this.fetchData}
-          >
-            Search
-          </button>
         </div>
       </div>
     );
