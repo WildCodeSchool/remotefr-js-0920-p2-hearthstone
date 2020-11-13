@@ -1,57 +1,200 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@600&display=swap');
 
 /********************************
--       ADVANCED SEARCH
+-        CONTAINERS
 ********************************/
 
 /* ------ Mobile version ------ */
 
+/*CSS du container principal*/
 .research-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   max-height: auto;
 
-  background-image: url(../assets/researchBG.png);
+  background-image: url('https://cdn.hipwallpaper.com/i/33/17/wW6Xit.jpg');
   background-position: center;
   background-size: cover;
 }
 
+/*CSS du container secondaire*/
 .research-content {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
   max-width: 90%;
-  padding: 5%;
+  height: auto;
+  padding: 3%;
   margin: 3%;
 
-  background-image: url(../assets/texturepapier.png);
-  background-size: cover;
-  filter: opacity(0.9);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .research-content h1 {
-  margin-top: 1px;
+  margin-top: 0.5px;
 
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'Berkshire Swash', cursive;
 }
 
+.research-content h2 {
+  margin-top: 1px;
+
+  color: #683e16;
+  font-size: 17px;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+#filter-research-button {
+  background-image: url('https://cdn.hipwallpaper.com/i/33/17/wW6Xit.jpg');
+  max-width: 50%;
+  margin-left: 25%;
+  font-family: 'Pridi', serif;
+}
+
+#filter-research-button:hover {
+  background-color: #62c9fa;
+  background-image: none;
+  outline: 0;
+}
+/* ------ Desktop version ------ */
+
+.research-content h1 {
+  font-size: 45px;
+}
+
+.research-content h2 {
+  font-size: 30px;
+}
+
+/********************************
+-           FILTERS
+********************************/
+
+/* ------ Mobile version ------ */
+
 .filters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.transparent-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.transparent-btn:focus {
+  outline: 0;
+}
+
+/* NAME */
+
+.name-research {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 10px;
+}
+
+#card-filter-search {
+  width: 50%;
+}
+
+/* CLASSES */
+
+.class-filter-container {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 100%;
+  padding-top: 25px;
+}
+
+.class-filter {
+  display: flex;
+  width: 50px;
+  padding: 2px;
+  filter: saturate(0%) brightness(200%);
+}
+
+.class-filter-selected {
+  filter: none;
+}
+
+.class-filter:hover {
+  filter: none;
+}
+
+/* MANA */
+
+.mana-filter-container {
+  padding-top: 20px;
+}
+
+.mana-filter {
+  display: flex;
+  width: 40px;
+  padding: 2px;
+}
+
+.mana-filter:hover {
+  filter: saturate(400%) brightness(200%);
+}
+
+.mana-filter-selected {
+  filter: saturate(400%) brightness(200%);
+}
+
+/*RARITY*/
+
+.rarity-filter-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.rarity-filter-container p {
+  margin: 0;
+  color: #683e16;
+  font-family: 'Pridi', serif;
+}
+
+.rarity-filter {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 50px;
+}
+
+.rarity-filter:hover {
+  filter: brightness(170%) contrast(100%);
+}
+
+.rarity-filter-selected {
+  filter: brightness(170%) contrast(100%);
+}
+
+/********************************
+-         CARDS LIST
+********************************/
+
+/* ------ Mobile version ------ */
+
+.catalogue {
   padding: 5%;
-  margin-bottom: 5%;
 
   border: #d76f45 ridge 6px;
+  background-color: rgb(255, 255, 203);
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.cards-list {
-  padding: 5%;
-
-  border: #d76f45 ridge 6px;
-  border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
+/* ------ Desktop version ------ */
