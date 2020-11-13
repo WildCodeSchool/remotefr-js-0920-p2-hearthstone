@@ -8,15 +8,31 @@
 /* ------ Mobile version ------ */
 
 /*CSS du container principal*/
-.research-container {
+.background {
   display: flex;
   justify-content: center;
   flex-direction: column;
   max-height: auto;
-
-  background-image: url('https://cdn.hipwallpaper.com/i/33/17/wW6Xit.jpg');
+  background-image: url(../assets/texture.jpg);
   background-position: center;
   background-size: cover;
+  /* background-color: rgba(73, 44, 10, 0.685); */
+}
+
+.research-container {
+  background-image: url(../assets/papyrus.jpg);
+  background-position: top;
+  background-size: cover;
+  max-width: 90%;
+  height: auto;
+  padding: 3%;
+  padding-top: 1%;
+  margin: 3%;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 /*CSS du container secondaire*/
@@ -25,22 +41,18 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
-  max-width: 90%;
-  height: auto;
-  padding: 3%;
-  margin: 3%;
-
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.research-content h1 {
+.research-container h1 {
   margin-top: 0.5px;
+  margin-bottom: 0;
 
   font-size: 25px;
   font-family: 'Berkshire Swash', cursive;
+}
+
+.decorative-border {
+  display: none;
 }
 
 .research-content h2 {
@@ -53,12 +65,40 @@
 
 /* ------ Desktop version ------ */
 
-.research-content h1 {
-  font-size: 45px;
-}
+@media only screen and (min-width: 1024px) {
+  .research-container h1 {
+    font-size: 45px;
+  }
 
-.research-content h2 {
-  font-size: 30px;
+  .research-content h2 {
+    font-size: 30px;
+  }
+
+  .research-content {
+    flex-direction: row;
+  }
+
+  .decorative-border {
+    display: flex;
+    align-self: center;
+    width: 50%;
+    max-height: 40px;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    filter: opacity(80%) contrast(120%) hue-rotate(2deg);
+  }
+
+  .filters {
+    max-width: 50%;
+    padding-right: 5px;
+    border-right: 2px solid;
+  }
+
+  .cards-list {
+    max-width: 50%;
+    max-height: 530px;
+    overflow: auto;
+  }
 }
 
 /********************************
@@ -66,11 +106,6 @@
 ********************************/
 
 /* ------ Mobile version ------ */
-
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-}
 
 .transparent-btn {
   background: transparent;
@@ -100,6 +135,7 @@
   background-color: #331f0c;
   color: #f2cd61;
   border-color: #6e5e2e;
+  padding-left: 10px;
 }
 
 #card-filter-search:focus {
@@ -107,7 +143,6 @@
 }
 
 #card-filter-search::placeholder {
-  padding-left: 10px;
   color: #f2cd61;
   font-family: Pridi, serif;
 }
@@ -124,7 +159,7 @@
 
 .class-filter {
   display: flex;
-  width: 50px;
+  width: 49px;
   padding: 2px;
   cursor: pointer;
   filter: saturate(0%) brightness(200%);
