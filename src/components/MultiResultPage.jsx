@@ -58,7 +58,7 @@ class MultiResultPage extends React.Component {
         params: { name },
       },
     } = this.props;
-    this.setState({ card: [], loading: true });
+    this.setState({ cards: [], loading: true });
     // console.log("SearchPages", this.props.match.params.name);//
     const options = {
       method: 'POST',
