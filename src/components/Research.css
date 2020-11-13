@@ -31,9 +31,6 @@
   padding: 3%;
   margin: 3%;
 
-  /* background-color: rgb(255, 255, 203);
-  border: #d76f45 ridge 6px;
-  border-radius: 2px; */
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -54,6 +51,18 @@
   font-family: 'Berkshire Swash', cursive;
 }
 
+#filter-research-button {
+  background-image: url('https://cdn.hipwallpaper.com/i/33/17/wW6Xit.jpg');
+  max-width: 50%;
+  margin-left: 25%;
+  font-family: 'Pridi', serif;
+}
+
+#filter-research-button:hover {
+  background-color: #62c9fa;
+  background-image: none;
+  outline: 0;
+}
 /* ------ Desktop version ------ */
 
 .research-content h1 {
@@ -119,6 +128,10 @@
   filter: none;
 }
 
+.class-filter:hover {
+  filter: none;
+}
+
 /* MANA */
 
 .mana-filter-container {
@@ -129,6 +142,10 @@
   display: flex;
   width: 40px;
   padding: 2px;
+}
+
+.mana-filter:hover {
+  filter: saturate(400%) brightness(200%);
 }
 
 .mana-filter-selected {
@@ -153,6 +170,10 @@
   padding-left: 5px;
   padding-right: 5px;
   width: 50px;
+}
+
+.rarity-filter:hover {
+  filter: brightness(170%) contrast(100%);
 }
 
 .rarity-filter-selected {

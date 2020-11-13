@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import FilterResearch from './FilterResearch';
+import FilterName from './FilterName';
 import FilterClass from './FilterClass';
 import FilterMana from './FilterMana';
 import FilterRarity from './FilterRarity';
@@ -44,7 +44,7 @@ class Research extends React.Component {
       <div>
         <div className="research-content">
           <h1>{title}</h1>
-          <FilterResearch />
+          <FilterName singleCard={cards} />
           <FilterClass
             cardClass={cardClass}
             handleSelectClass={this.handleSelectClass}
@@ -60,7 +60,11 @@ class Research extends React.Component {
           {cards.map((card) => (
             <Catalogue key={card.id} singleCard={card.name} />
           ))}
-          <button type="button" onClick={this.fetchData}>
+          <button
+            id="filter-research-button"
+            type="button"
+            onClick={this.fetchData}
+          >
             Search
           </button>
         </div>
