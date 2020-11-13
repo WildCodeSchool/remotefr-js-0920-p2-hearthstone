@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import FilterResearch from './FilterResearch';
+import FilterClass from './FilterClass';
+import FilterMana from './FilterMana';
+import FilterRarity from './FilterRarity';
 
-class Catalogue extends Component {
+class Filters extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,14 +17,17 @@ class Catalogue extends Component {
     const { cards } = this.state;
 
     return (
-      <div>
-        <div>{cards}</div>
+      <div className="filters">
+        <FilterResearch singleCard={cards} />
+        <FilterClass />
+        <FilterMana />
+        <FilterRarity />
       </div>
     );
   }
 }
 
-Catalogue.propTypes = {
+Filters.propTypes = {
   singleCard: PropTypes.arrayOf({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
@@ -30,4 +37,4 @@ Catalogue.propTypes = {
   }).isRequired,
 };
 
-export default Catalogue;
+export default Filters;

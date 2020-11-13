@@ -28,8 +28,9 @@ const cards = [
     rarity: 'common',
     mana: '5',
     class: 'paladin',
+  },
 ];
-    
+
 const avatars = [
   {
     name: 'Cyrille Fabre',
