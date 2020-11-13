@@ -3,23 +3,25 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import debug from 'debug';
+import './Research.css';
 
 const log = debug('resultpage');
 
 const DisplayListCard = (props) => {
   const { card } = props;
   const cardUrl = `/card/${card.id}`;
+
   return (
     <div key={card.id}>
       <h2>{card.name}</h2>
       <div>
-        <b>playerClass</b> : {card.playerClass}
+        <b>Class</b> : {card.playerClass}
       </div>
       <div>
-        <b>rarity</b> : {card.rarity}
+        <b>Rarity</b> : {card.rarity}
       </div>
-      <div>
-        <b>cardSet</b> : {card.cardSet}
+      <div className={card.cost === null ? 'hero' : ''}>
+        <b>Mana Cost</b> : {card.cost}
       </div>
 
       <div>
@@ -60,6 +62,7 @@ class MultiResultPage extends React.Component {
     } = this.props;
     this.setState({ cards: [], loading: true });
     // console.log("SearchPages", this.props.match.params.name);//
+
     const options = {
       method: 'POST',
       url: 'https://api-hearthstone.woozy.fr/v1/cards/search',
@@ -71,6 +74,7 @@ class MultiResultPage extends React.Component {
       .then((response) => {
         // console.log("axios  : ", response.data);
         return response.data;
+        // console.log(response.data);
       })
       .catch((error) => {
         log(error);
@@ -85,7 +89,6 @@ class MultiResultPage extends React.Component {
         params: { name },
       },
     } = this.props;
-    log(name);
     return (
       <div>
         <div>
@@ -118,7 +121,7 @@ DisplayListCard.propTypes = {
     name: PropTypes.string.isRequired,
     playerClass: PropTypes.string.isRequired,
     rarity: PropTypes.string.isRequired,
-    cardSet: PropTypes.string.isRequired,
+    cost: PropTypes.number.isRequired,
     id: PropTypes.string.isRequired,
   }).isRequired,
 };

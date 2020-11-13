@@ -32,7 +32,8 @@ class SearchBar extends React.Component {
             onChange={this.handleChange}
             placeholder="Find a card"
           />
-          <button type="button" id="search-button">
+
+          <button type="submit" id="search-button">
             <span role="img" aria-label="emoji" id="emoji">
               🔍
             </span>
