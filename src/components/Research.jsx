@@ -21,7 +21,19 @@ class Research extends React.Component {
   }
 
   // lancer l'appel API avec tous les criteres
-  fetchData = () => {};
+  fetchData = () => {
+    const data = {};
+    const { cardClass, cardRarity, cardMana } = this.state;
+    if (cardClass !== '') {
+      data.playerClass = cardClass;
+    }
+    if (cardRarity !== '') {
+      data.rarity = cardRarity;
+    }
+    if (cardMana !== -1) {
+      data.cost = cardMana;
+    }
+  };
 
   handleSelectClass = (newCardClass) => {
     // setState prend un 2eme argument optionnel : un callback
