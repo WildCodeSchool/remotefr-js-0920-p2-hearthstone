@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import PagePrinc from './components/PagePrinc';
 import Research from './components/Research';
+import MultiResultPage from './components/MultiResultPage';
+import SinglePage from './components/SinglePage';
 
 import './App.css';
 
@@ -81,6 +83,8 @@ function App() {
         <Route path="/research">
           <Research singleCard={cards} />
         </Route>
+        <Route path="/search/:name" component={MultiResultPage} />
+        <Route path="/card/:id" component={SinglePage} />
       </Switch>
       <Footer
         avatar={avatars}

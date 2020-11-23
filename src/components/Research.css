@@ -229,6 +229,9 @@
 
 /* ------ Mobile version ------ */
 
+.hero {
+  display: none;
+}
 .catalogue {
   padding: 5%;
 

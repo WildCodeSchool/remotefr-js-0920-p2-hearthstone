@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Logo from '../assets/testlogo2.png';
 import './Header.css';
-import SearchName from './SearchName';
+import SearchBar from './SearchBar';
 
 class Header extends React.Component {
   constructor(props) {
@@ -67,7 +67,7 @@ class Header extends React.Component {
           </li>
         </ul>
         <div className="search-bar">
-          <SearchName />
+          <SearchBar />
         </div>
       </nav>
     );
