@@ -6,6 +6,7 @@ import PagePrinc from './components/PagePrinc';
 import Research from './components/Research';
 import MultiResultPage from './components/MultiResultPage';
 import SinglePage from './components/SinglePage';
+import Multicriteria from './components/MultiCriteria';
 
 import './App.css';
 
@@ -82,6 +83,9 @@ function App() {
         </Route>
         <Route path="/research">
           <Research singleCard={cards} />
+        </Route>
+        <Route path="/research">
+          <Multicriteria singleCard={cards} />
         </Route>
         <Route path="/search/:name" component={MultiResultPage} />
         <Route path="/card/:id" component={SinglePage} />

@@ -90,7 +90,7 @@ class MultiCriteria extends React.Component {
     const { cards, loading } = this.state;
     const {
       match: {
-        params: { name, cost, playerClass, rarity },
+        // params: { name, cost, playerClass, rarity },
       },
     } = this.props;
     return (
