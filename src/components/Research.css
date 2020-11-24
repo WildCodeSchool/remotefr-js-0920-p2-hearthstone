@@ -16,19 +16,20 @@
   background-image: url(../assets/texture.jpg);
   background-position: center;
   background-size: cover;
-  /* background-color: rgba(73, 44, 10, 0.685); */
+  background-attachment: fixed;
 }
 
 .research-container {
   background-image: url(../assets/papyrus.jpg);
   background-position: top;
   background-size: cover;
+  background-attachment: fixed;
   max-width: 90%;
   height: auto;
   padding: 3%;
   padding-top: 1%;
   margin: 3%;
-  margin-top: 1%;
+  margin-top: 0;
   margin-bottom: 0%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -44,10 +45,10 @@
 }
 
 .research-container h1 {
-  margin-top: 0.5px;
-  margin-bottom: 0;
+  padding-top: 1%;
+  margin-bottom: 15px;
 
-  font-size: 25px;
+  font-size: 36px;
   font-family: 'Berkshire Swash', cursive;
 }
 
@@ -59,7 +60,7 @@
   margin-top: 1px;
 
   color: #683e16;
-  font-size: 17px;
+  font-size: 22px;
   font-family: 'Berkshire Swash', cursive;
 }
 
@@ -99,6 +100,88 @@
     max-height: 530px;
     overflow: auto;
   }
+
+  .cards-list p {
+    font-size: 18px;
+  }
+
+  .cards-list::-webkit-scrollbar {
+    width: 13px;
+    height: 12px;
+  }
+
+  .cards-list::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+
+  .cards-list::-webkit-scrollbar-thumb {
+    background: rgb(214, 166, 28);
+    background: linear-gradient(
+      180deg,
+      rgba(214, 166, 28, 1) 0%,
+      rgba(255, 216, 103, 1) 35%,
+      rgba(214, 166, 28, 1) 100%
+    );
+    border: 2px solid #683e16;
+    border-radius: 7px;
+  }
+
+  .cards-list::-webkit-scrollbar-thumb:hover {
+    background: rgb(214, 166, 28);
+    background: linear-gradient(
+      180deg,
+      rgba(214, 166, 28, 1) 0%,
+      rgba(255, 216, 103, 1) 35%,
+      rgba(214, 166, 28, 1) 100%
+    );
+  }
+
+  .cards-list::-webkit-scrollbar-thumb:active {
+    background: rgb(214, 166, 28);
+    background: linear-gradient(
+      180deg,
+      rgba(214, 166, 28, 1) 0%,
+      rgba(255, 216, 103, 1) 35%,
+      rgba(214, 166, 28, 1) 100%
+    );
+  }
+
+  .cards-list::-webkit-scrollbar-track {
+    background: rgb(60, 36, 13);
+    background: linear-gradient(
+      180deg,
+      rgba(60, 36, 13, 1) 0%,
+      rgba(104, 62, 22, 1) 35%,
+      rgba(60, 36, 13, 1) 100%
+    );
+    border: 15px none;
+    border-radius: 12px;
+  }
+
+  .cards-list::-webkit-scrollbar-track:hover {
+    background: rgb(60, 36, 13);
+    background: linear-gradient(
+      180deg,
+      rgba(60, 36, 13, 1) 0%,
+      rgba(104, 62, 22, 1) 35%,
+      rgba(60, 36, 13, 1) 100%
+    );
+  }
+
+  .cards-list::-webkit-scrollbar-track:active {
+    background: rgb(60, 36, 13);
+    background: linear-gradient(
+      180deg,
+      rgba(60, 36, 13, 1) 0%,
+      rgba(104, 62, 22, 1) 35%,
+      rgba(60, 36, 13, 1) 100%
+    );
+  }
+
+  .cards-list::-webkit-scrollbar-corner {
+    background: transparent;
+  }
 }
 
 /********************************
@@ -127,12 +210,18 @@
 }
 
 #card-filter-search {
-  cursor: pointer;
+  cursor: text;
   border-radius: 20px;
   width: 50%;
   height: 25px;
   font-weight: bold;
-  background-color: #331f0c;
+  background: rgb(60, 36, 13);
+  background: linear-gradient(
+    180deg,
+    rgba(60, 36, 13, 1) 0%,
+    rgba(104, 62, 22, 1) 35%,
+    rgba(60, 36, 13, 1) 100%
+  );
   color: #f2cd61;
   border-color: #6e5e2e;
   padding-left: 10px;
@@ -162,7 +251,7 @@
   width: 49px;
   padding: 2px;
   cursor: pointer;
-  filter: saturate(0%) brightness(200%);
+  filter: brightness(10%) contrast(90%);
 }
 
 .class-filter-selected {
@@ -203,6 +292,7 @@
 }
 
 .rarity-filter-container p {
+  font-size: 18px;
   margin: 0;
   color: #683e16;
   font-family: 'Pridi', serif;
@@ -228,19 +318,5 @@
 ********************************/
 
 /* ------ Mobile version ------ */
-
-.hero {
-  display: none;
-}
-.catalogue {
-  padding: 5%;
-
-  border: #d76f45 ridge 6px;
-  background-color: rgb(255, 255, 203);
-  border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
 
 /* ------ Desktop version ------ */

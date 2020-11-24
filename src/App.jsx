@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import DeckBuilding from './components/DeckBuilding';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PagePrinc from './components/PagePrinc';
@@ -8,6 +9,7 @@ import MultiResultPage from './components/MultiResultPage';
 import SinglePage from './components/SinglePage';
 
 import './App.css';
+import Tournaments from './components/Tournaments';
 
 const cards = [
   {
@@ -85,6 +87,8 @@ function App() {
         </Route>
         <Route path="/search/:name" component={MultiResultPage} />
         <Route path="/card/:id" component={SinglePage} />
+        <Route path="/deckbuilding" component={DeckBuilding} />
+        <Route path="/tournament" component={Tournaments} />
       </Switch>
       <Footer
         avatar={avatars}
