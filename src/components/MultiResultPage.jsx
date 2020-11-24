@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import debug from 'debug';
 import './Research.css';
+import './MultiResultPage.css';
 
 const log = debug('resultpage');
 
@@ -13,21 +14,11 @@ const DisplayListCard = (props) => {
 
   return (
     <div key={card.id}>
-      <h2>{card.name}</h2>
-      <div>
-        <b>Class</b> : {card.playerClass}
-      </div>
-      <div>
-        <b>Rarity</b> : {card.rarity}
-      </div>
-      <div className={card.cost === null ? 'hero' : ''}>
-        <b>Mana Cost</b> : {card.cost}
-      </div>
-
-      <div>
-        <Link to={cardUrl}>Voir la carte</Link>
-      </div>
-      <hr />
+      <Link to={cardUrl}>
+        <div className="imgCard">
+          <img src={card.pictures_normal} alt={card.name} />
+        </div>
+      </Link>
     </div>
   );
 };
@@ -96,10 +87,11 @@ class MultiResultPage extends React.Component {
         </div>
 
         <p>{loading ? 'Loading....' : ''}</p>
-
-        {cards.map((card) => {
-          return <DisplayListCard card={card} key={card.id} />;
-        })}
+        <div className="imgList">
+          {cards.map((card) => {
+            return <DisplayListCard card={card} key={card.id} />;
+          })}
+        </div>
       </div>
     );
   }
@@ -123,6 +115,7 @@ DisplayListCard.propTypes = {
     rarity: PropTypes.string.isRequired,
     cost: PropTypes.number.isRequired,
     id: PropTypes.string.isRequired,
+    pictures_normal: PropTypes.string.isRequired,
   }).isRequired,
 };
 
