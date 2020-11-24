@@ -2,32 +2,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Pridi:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
-body {
-  background-image: url('https://cdn.hipwallpaper.com/i/33/17/wW6Xit.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+/********************************
+-         BACKGROUND
+********************************/
+
+.background {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-height: auto;
+  background-image: url(../assets/texture.jpg);
   background-position: center;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  background-size: cover;
 }
+
+/********************************
+-          CONTAINER
+********************************/
 
 h1 {
   font-family: 'Berkshire Swash', cursive;
   text-align: center;
   color: #683e16;
+  margin: 0;
 }
 
 .articles {
-  font-family: 'Roboto', sans-serif;
-  margin-left: 10%;
-  margin-right: 10%;
-  text-align: justify;
-  /* color: #57394d; */
+  font-size: 18px;
+  background-image: url(../assets/papyrus.jpg);
+  background-position: top;
+  background-size: cover;
+  max-width: 90%;
+  height: auto;
+  padding: 3%;
+  padding-top: 1%;
+  margin: 3%;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  display: flex;
+  flex-direction: column;
 }
 
+.decorative-border {
+  display: none;
+}
+
+/********************************
+-      GAME INTRODUCTION
+********************************/
+
+.firstArticle {
+  max-width: 60%;
+  margin-left: 20%;
+}
+
+.displayed-intro-button {
+  cursor: pointer;
+  background-color: #331f0c;
+  color: #f2cd61;
+  border-color: #6e5e2e;
+  font-weight: bold;
+  padding: 8px;
+  font-family: 'pridi';
+  letter-spacing: 1px;
+}
+
+.displayed-intro-button:focus {
+  outline: 0;
+}
+
+.intro-hidden {
+  display: none;
+}
+
+/* ------ Desktop version ------ */
+
+@media only screen and (min-width: 1024px) {
+  .intro-hidden {
+    display: block;
+  }
+
+  .displayed-intro-button {
+    display: none;
+  }
+}
+
+/********************************
+-        CARD ANALYSIS
+********************************/
+
 .card_image {
-  text-align: center;
+  justify-self: center;
+  position: relative;
+}
+
+.card-attack-icon {
+  position: absolute;
+  bottom: 13.5%;
+  left: 3.7%;
+}
+
+.card-attack-icon:hover {
+}
+
+.card-health-icon {
+}
+
+.card-mana-icon {
+}
+
+.card-rarity-icon {
 }
 
 .Name {
@@ -78,6 +166,16 @@ h1 {
       'Health card_image'
       'Effect card_image';
     align-items: center;
+  }
+
+  .decorative-border {
+    display: flex;
+    align-self: center;
+    width: 50%;
+    max-height: 40px;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    filter: opacity(80%) contrast(120%) hue-rotate(2deg);
   }
 
   .card_image {
