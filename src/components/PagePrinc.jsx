@@ -78,27 +78,30 @@ class PagePrinc extends React.Component {
             </p>
             <div className="grid-container">
               <article className="card_image">
-                <img src={zephrysEN} alt="Zephrys" />
-                <img
-                  className="card-attack-icon"
-                  src={attackCard}
-                  alt="Card attack icon"
-                />
-                <img
-                  className="card-health-icon"
-                  src={healthCard}
-                  alt="Card health icon"
-                />
-                <img
-                  className="card-mana-icon"
-                  src={manaCard}
-                  alt="Card mana icon"
-                />
-                <img
-                  className="card-rarity-icon"
-                  src={rarityCard}
-                  alt="Card rarity icon"
-                />
+                <div className="card-image-inner">
+                  <img src={zephrysEN} alt="Zephrys" />
+                  <img
+                    className="card-attack-icon"
+                    src={attackCard}
+                    alt="Card attack icon"
+                  />
+
+                  <img
+                    className="card-health-icon"
+                    src={healthCard}
+                    alt="Card health icon"
+                  />
+                  <img
+                    className="card-mana-icon"
+                    src={manaCard}
+                    alt="Card mana icon"
+                  />
+                  <img
+                    className="card-rarity-icon"
+                    src={rarityCard}
+                    alt="Card rarity icon"
+                  />
+                </div>
               </article>
               <article className="Name">
                 <strong>Name:</strong> Card name.

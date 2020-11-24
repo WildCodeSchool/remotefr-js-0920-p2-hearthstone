@@ -50,7 +50,7 @@ class Research extends React.Component {
   };
 
   render() {
-    const title = 'Advanced Research';
+    const title = 'Advanced Search';
     const { cards, cardClass, cardRarity, cardMana } = this.state;
     return (
       <div className="background">

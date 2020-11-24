@@ -14,6 +14,7 @@
   background-image: url(../assets/texture.jpg);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 /********************************
@@ -21,6 +22,7 @@
 ********************************/
 
 h1 {
+  font-size: 36px;
   font-family: 'Berkshire Swash', cursive;
   text-align: center;
   color: #683e16;
@@ -32,12 +34,14 @@ h1 {
   background-image: url(../assets/papyrus.jpg);
   background-position: top;
   background-size: cover;
+  background-attachment: fixed;
+
   max-width: 90%;
   height: auto;
   padding: 3%;
   padding-top: 1%;
   margin: 3%;
-  margin-top: 1%;
+  margin-top: 0;
   margin-bottom: 0%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -89,6 +93,10 @@ h1 {
   .displayed-intro-button {
     display: none;
   }
+
+  h1 {
+    font-size: 45px;
+  }
 }
 
 /********************************
@@ -100,22 +108,72 @@ h1 {
   position: relative;
 }
 
+.card-image-inner {
+  position: relative;
+  display: inline-block;
+}
+
 .card-attack-icon {
   position: absolute;
-  bottom: 13.5%;
-  left: 3.7%;
+  bottom: -6px;
+  left: -12px;
 }
 
 .card-attack-icon:hover {
+  width: 107px;
+  left: -14px;
+  bottom: -8px;
 }
 
+/* .card-attack-text {
+  position: absolute;
+  bottom: 13px;
+  left: -250px;
+
+  opacity: 0;
+} */
+
+/* .card-attack-text:hover {
+  opacity: 1;
+  left: -14px;
+  transform: translateX(-300px);
+  transition: transform 0.7s 0s ease-in;
+} */
+
 .card-health-icon {
+  position: absolute;
+  bottom: -6px;
+  left: 196px;
+}
+
+.card-health-icon:hover {
+  width: 107px;
+  left: 194px;
+  bottom: -8px;
 }
 
 .card-mana-icon {
+  position: absolute;
+  bottom: 309px;
+  left: 10px;
+}
+
+.card-mana-icon:hover {
+  width: 68px;
+  left: 8px;
+  bottom: 307px;
 }
 
 .card-rarity-icon {
+  position: absolute;
+  bottom: 117px;
+  left: 114px;
+}
+
+.card-rarity-icon:hover {
+  width: 70px;
+  left: 111px;
+  bottom: 115px;
 }
 
 .Name {
