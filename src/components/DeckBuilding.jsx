@@ -1,12 +1,18 @@
 import React from 'react';
 import './DeckBuilding.css';
 
+import DeckBuildingDoor from '../assets/deckbuilding.jpg';
+
 const DeckBuilding = () => {
   return (
     <main className="background">
       <div className="container">
         <h1>Deck building</h1>
-        <p>Deck building will be available soon !</p>
+        <img
+          id="deckbuilding-door"
+          src={DeckBuildingDoor}
+          alt="Deckbuilding construction"
+        />
       </div>
     </main>
   );
