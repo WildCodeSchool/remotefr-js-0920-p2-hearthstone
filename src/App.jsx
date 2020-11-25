@@ -11,30 +11,6 @@ import SinglePage from './components/SinglePage';
 import './App.css';
 import Tournaments from './components/Tournaments';
 
-const cards = [
-  {
-    id: 1,
-    name: 'Jongleuse de lames',
-    rarity: 'rare',
-    mana: '6',
-    class: 'demon-hunter',
-  },
-  {
-    id: 2,
-    name: 'Whatley, maître de la piste',
-    rarity: 'légendaire',
-    mana: '5',
-    class: 'warrior',
-  },
-  {
-    id: 3,
-    name: 'Griffon du manège',
-    rarity: 'common',
-    mana: '5',
-    class: 'paladin',
-  },
-];
-
 const avatars = [
   {
     name: 'Cyrille Fabre',
@@ -83,7 +59,7 @@ function App() {
           <PagePrinc />
         </Route>
         <Route path="/research">
-          <Research singleCard={cards} />
+          <Research />
         </Route>
         <Route path="/search/:name" component={MultiResultPage} />
         <Route path="/card/:id" component={SinglePage} />
