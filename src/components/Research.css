@@ -176,8 +176,8 @@
   }
 
   .filters {
-    max-width: 50%;
     border-right: 2px solid;
+    padding: 0 5%;
   }
 
   /********************************
@@ -187,6 +187,9 @@
     max-width: 50%;
     max-height: 530px;
     overflow: auto;
+    padding: 0 2%;
+    display: flex;
+    justify-content: center;
   }
 
   .cards-list::-webkit-scrollbar {

@@ -79,7 +79,7 @@ class MultiResultPage extends React.Component {
         <div className="container">
           <div>
             <h1 className="title-selection">
-              Votre recherche avec les mots-clefs : <i>{name}</i>
+              First 20 results for : <i>{name}</i>
             </h1>
             <img
               className="decorative-border selection-border"
