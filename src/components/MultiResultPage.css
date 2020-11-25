@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   margin: 0 auto;
+  /* overflow-y: scroll; */
 }
 
 .titleResearch {

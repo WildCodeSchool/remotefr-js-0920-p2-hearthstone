@@ -122,14 +122,10 @@ class Research extends React.Component {
 }
 
 Research.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      rarity: PropTypes.string.isRequired,
-      mana: PropTypes.number.isRequired,
-      class: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
+  name: PropTypes.string.isRequired,
+  rarity: PropTypes.string.isRequired,
+  mana: PropTypes.number.isRequired,
+  class: PropTypes.string.isRequired,
+}.isRequired;
 
 export default Research;

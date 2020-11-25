@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import Benoit from '../assets/AvatarCarteBenoit.png';
+import './Random.css';
+import DecorativeBorder from '../assets/decorative-border3.png';
 
 class Random extends React.Component {
   constructor(props) {
@@ -11,11 +13,10 @@ class Random extends React.Component {
   }
 
   randomCard = async () => {
-    const id = Math.floor(Math.random() * Math.floor(20));
     const {
       data: { pictures_normal: pictureNormal },
     } = await axios.get(
-      `https://api-hearthstone.woozy.fr/v1/cards/single/id/${id}`,
+      `https://api-hearthstone.woozy.fr/v1/cards/single/random`,
     );
     this.setState({ img: pictureNormal });
   };
@@ -27,19 +28,21 @@ class Random extends React.Component {
       <div className="background">
         <div className="articles">
           <h1 className="title">Random card </h1>
+          <img className="decorative-border" src={DecorativeBorder} alt="" />
           <blockquote className="our-team">
             <img src={img} alt="Avatar de Benoit" />
           </blockquote>
-          <button
-            className="random-btn"
-            type="button"
-            onClick={() => this.randomCard()}
-          >
-            Another random card
-            <span role="img" aria-label="emoji">
-              🎲
-            </span>
-          </button>
+          <div className="hs-wrapper gold">
+            <button
+              className="random-btn hs-button gold"
+              type="button"
+              onClick={() => this.randomCard()}
+            >
+              <span className="hs-border gold">
+                <span className="hs-text gold">Another random card</span>
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     );

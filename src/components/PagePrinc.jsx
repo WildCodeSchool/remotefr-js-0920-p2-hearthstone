@@ -103,35 +103,31 @@ class PagePrinc extends React.Component {
                   />
                 </div>
               </article>
+              <article className="Mana-Cost">
+                <strong className="center">Mana cost: </strong> Card mana cost.
+              </article>
               <article className="Name">
-                <strong>Name:</strong> Card name.
+                <strong className="center">Name: </strong>
+                <span> Card name.</span>
               </article>
-              <article className="Class">
-                <strong>Class:</strong> Ten classes are available (demon hunter,
-                druid, hunter, mage, paladin, priest, rogue, shaman, warlock,
-                warrior).
-              </article>
-              <article className="Rarety">
-                <strong>Rarity: </strong>
-                {`Six rarities available with gem color associated (no gem: free,
-            white gem: common, blue gem: rare, purple gem: epic, orange gem:
-            legendary)`}
-                .
-              </article>
-              <article className="Mana-cost">
-                <strong>Mana cost:</strong> Number in blue hexagon is the card
-                mana cost.
-              </article>
-              <article className="Attack">
-                <strong>Attack:</strong> Number in yellow circle is the quantity
-                of damage dealt by the minion.
+              <article className="Rarity">
+                <strong className="center">Rarity: </strong>
+                <span className="right">
+                  From common(frequent) to legendary(rarest) .
+                </span>
               </article>
               <article className="Health">
-                <strong>Health: </strong>Number in red drop is the quantity of
-                damage the minion can handle.
+                <strong className="center">Health: </strong>
+                <span className="right">Damge a minion can take.</span>
               </article>
               <article className="Effect">
                 <strong>Effect:</strong> Some cards have a battlefield effect.
+              </article>
+              <article className="Attack">
+                <strong>Attack:</strong> Damage dealt by the minion.
+              </article>
+              <article className="Class">
+                <strong>Class:</strong> Ten classes are available.
               </article>
             </div>
           </blockquote>

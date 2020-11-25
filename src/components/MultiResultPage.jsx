@@ -49,7 +49,6 @@ class MultiResultPage extends React.Component {
       },
     } = this.props;
     this.setState({ cards: [] });
-    // console.log("SearchPages", this.props.match.params.name);//
 
     const options = {
       method: 'POST',
@@ -60,9 +59,7 @@ class MultiResultPage extends React.Component {
     const result = await axios
       .request(options)
       .then((response) => {
-        // console.log("axios  : ", response.data);
         return response.data;
-        // console.log(response.data);
       })
       .catch((error) => {
         log(error);

@@ -6,7 +6,7 @@ import DeckBuildingDoor from '../assets/deckbuilding.jpg';
 const DeckBuilding = () => {
   return (
     <main className="background">
-      <div className="container">
+      <div className="container deckbuilding">
         <h1>Deck building</h1>
         <img
           id="deckbuilding-door"

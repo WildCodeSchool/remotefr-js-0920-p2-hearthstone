@@ -142,7 +142,7 @@
 
 /* ------ Desktop version ------ */
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1085px) {
   .rollmenu {
     display: none;
   }
@@ -212,7 +212,7 @@
 
 /* ------ Desktop version ------ */
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1085px) {
   #cardName {
     cursor: text;
     border-radius: 20px;
@@ -230,8 +230,7 @@
     border-color: #ffd65c;
 
     padding-left: 10px;
-    margin-right: 5%;
-    margin-bottom: 1%;
+    margin: 0px 2.5%;
   }
 
   #cardName:focus {

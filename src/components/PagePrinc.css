@@ -10,7 +10,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  max-height: auto;
   background-image: url(../assets/texture.jpg);
   background-position: center;
   background-size: cover;
@@ -34,15 +33,10 @@ h1 {
   background-image: url(../assets/papyrus.jpg);
   background-position: top;
   background-size: cover;
-  background-attachment: fixed;
 
   max-width: 90%;
-  height: auto;
-  padding: 3%;
-  padding-top: 1%;
-  margin: 3%;
-  margin-top: 0;
-  margin-bottom: 0%;
+  padding: 1% 3%;
+  margin: 0px auto;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -55,6 +49,24 @@ h1 {
   display: none;
 }
 
+.left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.right {
+  /* display: flex; */
+  justify-content: flex-end;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.right-text {
+  text-align: right;
+}
 .marker {
   list-style-type: none;
   font-size: 18px;
@@ -134,21 +146,6 @@ h1 {
   bottom: -8px;
 }
 
-/* .card-attack-text {
-  position: absolute;
-  bottom: 13px;
-  left: -250px;
-
-  opacity: 0;
-} */
-
-/* .card-attack-text:hover {
-  opacity: 1;
-  left: -14px;
-  transform: translateX(-300px);
-  transition: transform 0.7s 0s ease-in;
-} */
-
 .card-health-icon {
   position: absolute;
   bottom: -6px;
@@ -194,7 +191,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-.Rarety {
+.Rarity {
   margin-bottom: 10px;
 }
 
@@ -221,52 +218,33 @@ h1 {
 
   .grid-container {
     display: grid;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 35% 30% 35%;
     grid-template-rows: 75px 75px 75px 75px 75px 75px 75px;
-    gap: 0% 15%;
+    gap: 2% 0%;
     grid-template-areas:
-      'Name card_image'
-      'Class card_image'
-      'Rarety card_image'
-      'Mana-cost card_image'
-      'Attack card_image'
-      'Health card_image'
-      'Effect card_image';
-    align-items: center;
-  }
-
-  .decorative-border {
-    display: flex;
-    align-self: center;
-    width: 50%;
-    max-height: 40px;
-    margin-bottom: 20px;
-    margin-left: 25%;
-    filter: opacity(80%) contrast(120%) hue-rotate(2deg);
+      '. Class .'
+      '. card_image .'
+      'Mana-Cost card_image .'
+      '. card_image Name'
+      'Effect card_image Rarity'
+      'Attack card_image Health'
+      '. . .';
   }
 
   .card_image {
     grid-area: card_image;
   }
 
+  .Mana-Cost {
+    grid-area: Mana-Cost;
+  }
+
   .Name {
     grid-area: Name;
   }
 
-  .Class {
-    grid-area: Class;
-  }
-
-  .Rarety {
-    grid-area: Rarety;
-  }
-
-  .Mana-cost {
-    grid-area: Mana-cost;
-  }
-
-  .Attack {
-    grid-area: Attack;
+  .Rarity {
+    grid-area: Rarity;
   }
 
   .Health {
@@ -275,5 +253,22 @@ h1 {
 
   .Effect {
     grid-area: Effect;
+  }
+
+  .Attack {
+    grid-area: Attack;
+  }
+
+  .Class {
+    grid-area: Class;
+    margin-top: 40px;
+  }
+
+  .decorative-border {
+    display: flex;
+    width: 50%;
+    max-height: 40px;
+    margin: 20px auto;
+    filter: opacity(80%) contrast(120%) hue-rotate(2deg);
   }
 }
