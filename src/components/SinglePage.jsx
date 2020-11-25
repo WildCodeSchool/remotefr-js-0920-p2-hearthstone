@@ -25,7 +25,7 @@ export const DisplayCard = (props) => {
         <img src={card.pictures_normal} alt={card.name} />
       </div>
 
-      <ul>
+      <ul className="marker">
         <li>
           <strong>Name:</strong>
           {card.name}
@@ -84,7 +84,6 @@ class SinglePage extends React.Component {
     super(props);
     this.state = {
       card: {},
-      loading: true,
     };
   }
 
@@ -107,7 +106,7 @@ class SinglePage extends React.Component {
         params: { id },
       },
     } = this.props;
-    this.setState({ card: [], loading: true });
+    this.setState({ card: [] });
 
     const options = {
       method: 'GET',
@@ -122,17 +121,18 @@ class SinglePage extends React.Component {
       .catch((error) => {
         log(error);
       });
-    this.setState({ loading: false });
+
     this.setState({ card: result });
   };
 
   render() {
-    const { card, loading } = this.state;
+    const { card } = this.state;
 
     return (
-      <div>
-        <p>{loading ? 'Loading.....' : ''}</p>
-        <DisplayCard card={card} />
+      <div className="background">
+        <div className="research-container">
+          <DisplayCard card={card} />
+        </div>
       </div>
     );
   }

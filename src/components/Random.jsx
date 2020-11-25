@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Benoit from '../assets/AvatarCarteBenoit.png';
 import './Random.css';
+import DecorativeBorder from '../assets/decorative-border3.png';
 
 class Random extends React.Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class Random extends React.Component {
       <div className="background">
         <div className="articles">
           <h1 className="title">Random card </h1>
+          <img className="decorative-border" src={DecorativeBorder} alt="" />
           <blockquote className="our-team">
             <img src={img} alt="Avatar de Benoit" />
           </blockquote>

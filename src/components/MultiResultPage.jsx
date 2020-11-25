@@ -3,8 +3,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import debug from 'debug';
-import './Research.css';
 import './MultiResultPage.css';
+import DecorativeBorder from '../assets/decorative-border3.png';
 
 const log = debug('resultpage');
 
@@ -13,13 +13,11 @@ export const DisplayListCard = (props) => {
   const cardUrl = `/card/${card.id}`;
 
   return (
-    <div key={card.id}>
-      <Link to={cardUrl}>
-        <div className="imgCard">
-          <img src={card.pictures_normal} alt={card.name} />
-        </div>
-      </Link>
-    </div>
+    <Link to={cardUrl} key={card.id}>
+      <div className="imgCard">
+        <img src={card.pictures_normal} alt={card.name} />
+      </div>
+    </Link>
   );
 };
 
@@ -28,7 +26,6 @@ class MultiResultPage extends React.Component {
     super(props);
     this.state = {
       cards: [],
-      loading: 'true',
     };
   }
 
@@ -51,8 +48,7 @@ class MultiResultPage extends React.Component {
         params: { name },
       },
     } = this.props;
-    this.setState({ cards: [], loading: true });
-    // console.log("SearchPages", this.props.match.params.name);//
+    this.setState({ cards: [] });
 
     const options = {
       method: 'POST',
@@ -63,34 +59,39 @@ class MultiResultPage extends React.Component {
     const result = await axios
       .request(options)
       .then((response) => {
-        // console.log("axios  : ", response.data);
         return response.data;
-        // console.log(response.data);
       })
       .catch((error) => {
         log(error);
       });
-    this.setState({ loading: false, cards: result });
+    this.setState({ cards: result });
   };
 
   render() {
-    const { cards, loading } = this.state;
+    const { cards } = this.state;
     const {
       match: {
         params: { name },
       },
     } = this.props;
     return (
-      <div>
-        <div>
-          Votre recherche avec les mots clef : <b>{name}</b>
-        </div>
-
-        <p>{loading ? 'Loading....' : ''}</p>
-        <div className="imgList">
-          {cards.map((card) => {
-            return <DisplayListCard card={card} key={card.id} />;
-          })}
+      <div className="background">
+        <div className="container">
+          <div>
+            <h1 className="title-selection">
+              Votre recherche avec les mots-clefs : <i>{name}</i>
+            </h1>
+            <img
+              className="decorative-border selection-border"
+              src={DecorativeBorder}
+              alt="Decorative border under title"
+            />
+          </div>
+          <div className="imgList">
+            {cards.map((card) => {
+              return <DisplayListCard card={card} key={card.id} />;
+            })}
+          </div>
         </div>
       </div>
     );

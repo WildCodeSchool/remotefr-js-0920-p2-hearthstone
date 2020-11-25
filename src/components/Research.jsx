@@ -66,7 +66,9 @@ class Research extends React.Component {
     };
     const result = await axios
       .request(options)
-      .then((response) => response.data)
+      .then((response) => {
+        return response.data;
+      })
       .catch((error) => {
         console.log(error);
       });

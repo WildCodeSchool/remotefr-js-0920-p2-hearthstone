@@ -104,7 +104,7 @@ class PagePrinc extends React.Component {
                 </div>
               </article>
               <article className="Mana-Cost">
-                <strong>Mana cost: </strong> Card mana cost.
+                <strong className="center">Mana cost: </strong> Card mana cost.
               </article>
               <article className="Name">
                 <strong className="center">Name: </strong>

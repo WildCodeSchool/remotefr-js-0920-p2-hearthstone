@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { DisplayListCard } from './MultiResultPage';
+import './Research.css';
 
 class Catalogue extends Component {
   constructor(props) {
@@ -13,12 +14,10 @@ class Catalogue extends Component {
   render() {
     const { card } = this.props;
     return (
-      <div>
-        <div>
-          {card.map((c) => (
-            <DisplayListCard key={c.id} card={c} />
-          ))}
-        </div>
+      <div className="searchList">
+        {card.map((c) => (
+          <DisplayListCard key={c.id} card={c} />
+        ))}
       </div>
     );
   }
