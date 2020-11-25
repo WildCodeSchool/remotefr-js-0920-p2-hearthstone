@@ -55,6 +55,24 @@ h1 {
   display: none;
 }
 
+.left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.right-text {
+  text-align: right;
+}
 /********************************
 -      GAME INTRODUCTION
 ********************************/
@@ -131,9 +149,9 @@ h1 {
   left: -250px;
 
   opacity: 0;
-} */
+}
 
-/* .card-attack-text:hover {
+.card-attack-text:hover {
   opacity: 1;
   left: -14px;
   transform: translateX(-300px);
@@ -185,7 +203,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-.Rarety {
+.Rarity {
   margin-bottom: 10px;
 }
 
@@ -210,7 +228,7 @@ h1 {
 @media only screen and (min-width: 1024px) {
   /* ------ Gestion du grid ------ */
 
-  .grid-container {
+  /* .grid-container {
     display: grid;
     grid-template-columns: 40% 40%;
     grid-template-rows: 75px 75px 75px 75px 75px 75px 75px;
@@ -218,12 +236,60 @@ h1 {
     grid-template-areas:
       'Name card_image'
       'Class card_image'
-      'Rarety card_image'
+      'Rarity card_image'
       'Mana-cost card_image'
       'Attack card_image'
       'Health card_image'
       'Effect card_image';
     align-items: center;
+  } */
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 75px 75px 75px 75px 75px 75px 75px;
+    gap: 2% 0%;
+    grid-template-areas:
+      '. Class .'
+      '. card_image .'
+      'Mana-Cost card_image .'
+      '. card_image Name'
+      'Effect card_image Rarity'
+      'Attack card_image Health'
+      '. . .';
+  }
+
+  .card_image {
+    grid-area: card_image;
+  }
+
+  .Mana-Cost {
+    grid-area: Mana-Cost;
+  }
+
+  .Name {
+    grid-area: Name;
+  }
+
+  .Rarity {
+    grid-area: Rarity;
+  }
+
+  .Health {
+    grid-area: Health;
+  }
+
+  .Effect {
+    grid-area: Effect;
+  }
+
+  .Attack {
+    grid-area: Attack;
+  }
+
+  .Class {
+    grid-area: Class;
+    margin-top: 40px;
   }
 
   .decorative-border {
@@ -236,30 +302,20 @@ h1 {
     filter: opacity(80%) contrast(120%) hue-rotate(2deg);
   }
 
-  .card_image {
+  /* .card_image {
     grid-area: card_image;
-  }
-
-  .Name {
-    grid-area: Name;
-  }
-
-  .Class {
-    grid-area: Class;
-  }
-
-  .Rarety {
-    grid-area: Rarety;
   }
 
   .Mana-cost {
     grid-area: Mana-cost;
   }
 
-  .Attack {
-    grid-area: Attack;
+  .Name {
+    grid-area: Name;
   }
-
+  .Rarity {
+    grid-area: Rarity;
+  }
   .Health {
     grid-area: Health;
   }
@@ -267,4 +323,12 @@ h1 {
   .Effect {
     grid-area: Effect;
   }
+
+  .Attack {
+    grid-area: Attack;
+  }
+
+  .Class {
+    grid-area: Class;
+  } */
 }

@@ -9,6 +9,11 @@
   background-attachment: fixed;
 }
 
+.background,
+.container {
+  height: 800px !important;
+}
+
 .container {
   font-size: 18px;
   background-image: url(../assets/papyrus.jpg);
@@ -58,4 +63,7 @@ h1 {
   h1 {
     font-size: 45px;
   }
+  /* .deckbuilding {
+    height: 800px;
+  } */
 }
