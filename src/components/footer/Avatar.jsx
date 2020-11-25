@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class Avatar extends Component {
   constructor(props) {
@@ -15,15 +16,17 @@ class Avatar extends Component {
   render() {
     const { smallUrl, name, id, bigUrl } = this.props;
     return (
-      <img
-        className="change"
-        id={id}
-        src={smallUrl}
-        alt={name}
-        title={name}
-        onMouseEnter={() => this.changeImage(id, bigUrl)}
-        onMouseLeave={() => this.changeImage(id, smallUrl)}
-      />
+      <Link to="ourteam">
+        <img
+          className="change"
+          id={id}
+          src={smallUrl}
+          alt={name}
+          title={name}
+          onMouseEnter={() => this.changeImage(id, bigUrl)}
+          onMouseLeave={() => this.changeImage(id, smallUrl)}
+        />
+      </Link>
     );
   }
 }

@@ -33,6 +33,7 @@ const Footer = ({ avatar, socialNetwork, websiteUrl }) => {
               name={avatar[0].name}
               bigUrl={CarteCycy}
               smallUrl={Cycy}
+              onClick={<Link to="Team" />}
             />
             <Avatar
               id={avatar[1].id}

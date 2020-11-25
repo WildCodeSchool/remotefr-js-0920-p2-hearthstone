@@ -8,6 +8,7 @@ import Research from './components/Research';
 import MultiResultPage from './components/MultiResultPage';
 import SinglePage from './components/SinglePage';
 import Random from './components/Random';
+import Team from './components/Team';
 
 import './App.css';
 import Tournaments from './components/Tournaments';
@@ -73,6 +74,7 @@ function App() {
         <Route path="/card/:id" component={SinglePage} />
         <Route path="/deckbuilding" component={DeckBuilding} />
         <Route path="/tournament" component={Tournaments} />
+        <Route path="/ourteam" component={Team} />
       </Switch>
       <Footer
         avatar={avatars}

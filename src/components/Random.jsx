@@ -24,14 +24,23 @@ class Random extends React.Component {
     const { img } = this.state;
 
     return (
-      <div>
-        <img src={img} alt="Avatar de Benoit" />
-        <button className="btn" type="button" onClick={() => this.randomCard()}>
-          Another random card
-          <span role="img" aria-label="emoji">
-            🎲
-          </span>
-        </button>
+      <div className="background">
+        <div className="articles">
+          <h1 className="title">Random card </h1>
+          <blockquote className="our-team">
+            <img src={img} alt="Avatar de Benoit" />
+          </blockquote>
+          <button
+            className="random-btn"
+            type="button"
+            onClick={() => this.randomCard()}
+          >
+            Another random card
+            <span role="img" aria-label="emoji">
+              🎲
+            </span>
+          </button>
+        </div>
       </div>
     );
   }
