@@ -9,6 +9,7 @@ import MultiResultPage from './components/MultiResultPage';
 import SinglePage from './components/SinglePage';
 
 import './App.css';
+import 'leaflet/dist/leaflet.css';
 import Tournaments from './components/Tournaments';
 
 const cards = [
