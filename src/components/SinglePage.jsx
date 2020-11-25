@@ -5,7 +5,7 @@ import debug from 'debug';
 
 const log = debug('resultpage');
 
-const DisplayCard = (props) => {
+export const DisplayCard = (props) => {
   const { card } = props;
   return (
     <div>

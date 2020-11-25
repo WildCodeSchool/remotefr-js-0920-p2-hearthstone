@@ -28,9 +28,25 @@ const Footer = ({ avatar, socialNetwork, websiteUrl }) => {
         </div>
         <div className="hidden-mobile team">
           <li>
-            <Avatar name={avatar[0].name} bigUrl={CarteCycy} smallUrl={Cycy} />
-            <Avatar name={avatar[1].name} bigUrl={CarteJuju} smallUrl={Juju} />
-            <Avatar name={avatar[2].name} bigUrl={CarteVivi} smallUrl={Vivi} />
+            <Avatar
+              id={avatar[0].id}
+              name={avatar[0].name}
+              bigUrl={CarteCycy}
+              smallUrl={Cycy}
+              onClick={<Link to="Team" />}
+            />
+            <Avatar
+              id={avatar[1].id}
+              name={avatar[1].name}
+              bigUrl={CarteJuju}
+              smallUrl={Juju}
+            />
+            <Avatar
+              id={avatar[2].id}
+              name={avatar[2].name}
+              bigUrl={CarteVivi}
+              smallUrl={Vivi}
+            />
           </li>
         </div>
         <div className="socialLinks-container">
@@ -51,6 +67,7 @@ const Footer = ({ avatar, socialNetwork, websiteUrl }) => {
 };
 
 Footer.propTypes = {
+  id: PropTypes.string,
   avatar: PropTypes.Array,
   socialNetwork: PropTypes.Array,
   websiteUrl: PropTypes.Array,

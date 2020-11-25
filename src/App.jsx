@@ -7,6 +7,8 @@ import PagePrinc from './components/PagePrinc';
 import Research from './components/Research';
 import MultiResultPage from './components/MultiResultPage';
 import SinglePage from './components/SinglePage';
+import Random from './components/Random';
+import Team from './components/Team';
 
 import './App.css';
 import Tournaments from './components/Tournaments';
@@ -15,14 +17,20 @@ const avatars = [
   {
     name: 'Cyrille Fabre',
     bigUrl: '../assets/AvatarCarteCyrille.png',
+    smallUrl: '../assets/cycyrond.png',
+    id: 'avatarCycy',
   },
   {
     name: 'Justine Pain',
     bigUrl: '../assets/AvatarCarteJustine.png',
+    smallUrl: '../assets/jujurond.png',
+    id: 'avatarJuju',
   },
   {
     name: 'Vivien Michelesi',
     bigUrl: '../assets/AvatarCarteVivien.png',
+    smallUrl: '../assets/vivirond.png',
+    id: 'avatarVivi',
   },
 ];
 
@@ -61,10 +69,12 @@ function App() {
         <Route path="/research">
           <Research />
         </Route>
+        <Route path="/random" component={Random} />
         <Route path="/search/:name" component={MultiResultPage} />
         <Route path="/card/:id" component={SinglePage} />
         <Route path="/deckbuilding" component={DeckBuilding} />
         <Route path="/tournament" component={Tournaments} />
+        <Route path="/ourteam" component={Team} />
       </Switch>
       <Footer
         avatar={avatars}

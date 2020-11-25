@@ -1,26 +1,40 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-class CharAvatar extends Component {
+class Avatar extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
+  changeImage = (id, url) => {
+    const img = document.getElementById(id);
+    img.setAttribute('src', url);
+  };
+
   render() {
-    const { bigUrl, smallUrl, name } = this.props;
+    const { smallUrl, name, id, bigUrl } = this.props;
     return (
-      <a href={bigUrl}>
-        <img src={smallUrl} alt={name} title={name} />
-      </a>
+      <Link to="ourteam">
+        <img
+          className="change"
+          id={id}
+          src={smallUrl}
+          alt={name}
+          title={name}
+          onMouseEnter={() => this.changeImage(id, bigUrl)}
+          onMouseLeave={() => this.changeImage(id, smallUrl)}
+        />
+      </Link>
     );
   }
 }
 
-CharAvatar.propTypes = {
+Avatar.propTypes = {
   name: PropTypes.string,
   title: PropTypes.string,
   src: PropTypes.string,
 }.isRequired;
 
-export default CharAvatar;
+export default Avatar;
