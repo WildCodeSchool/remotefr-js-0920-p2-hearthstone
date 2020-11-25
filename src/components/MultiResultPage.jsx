@@ -8,7 +8,7 @@ import './MultiResultPage.css';
 
 const log = debug('resultpage');
 
-const DisplayListCard = (props) => {
+export const DisplayListCard = (props) => {
   const { card } = props;
   const cardUrl = `/card/${card.id}`;
 
@@ -119,4 +119,4 @@ DisplayListCard.propTypes = {
   }).isRequired,
 };
 
-// export default MultiResultPage;
+export default MultiResultPage;

@@ -1,27 +1,31 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { DisplayListCard } from './MultiResultPage';
 
 class Catalogue extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cards: props.singleCard,
+      // cards: props.card,
     };
   }
 
   render() {
-    const { cards } = this.state;
-
+    const { card } = this.props;
     return (
       <div>
-        <div>{cards}</div>
+        <div>
+          {card.map((c) => (
+            <DisplayListCard key={c.id} card={c} />
+          ))}
+        </div>
       </div>
     );
   }
 }
 
 Catalogue.propTypes = {
-  singleCard: PropTypes.arrayOf({
+  card: PropTypes.arrayOf({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     rarity: PropTypes.string.isRequired,

@@ -7,33 +7,9 @@ import PagePrinc from './components/PagePrinc';
 import Research from './components/Research';
 import MultiResultPage from './components/MultiResultPage';
 import SinglePage from './components/SinglePage';
-// import Multicriteria from './components/MultiCriteria';
+
 import './App.css';
 import Tournaments from './components/Tournaments';
-
-const cards = [
-  {
-    id: 1,
-    name: 'Jongleuse de lames',
-    rarity: 'rare',
-    mana: '6',
-    class: 'demon-hunter',
-  },
-  {
-    id: 2,
-    name: 'Whatley, maître de la piste',
-    rarity: 'légendaire',
-    mana: '5',
-    class: 'warrior',
-  },
-  {
-    id: 3,
-    name: 'Griffon du manège',
-    rarity: 'common',
-    mana: '5',
-    class: 'paladin',
-  },
-];
 
 const avatars = [
   {
@@ -83,11 +59,8 @@ function App() {
           <PagePrinc />
         </Route>
         <Route path="/research">
-          <Research singleCard={cards} />
+          <Research />
         </Route>
-        {/* <Route path="/research">
-          <Multicriteria singleCard={cards} />
-        </Route> */}
         <Route path="/search/:name" component={MultiResultPage} />
         <Route path="/card/:id" component={SinglePage} />
         <Route path="/deckbuilding" component={DeckBuilding} />

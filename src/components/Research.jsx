@@ -5,6 +5,7 @@ import FilterName from './FilterName';
 import FilterClass from './FilterClass';
 import FilterMana from './FilterMana';
 import FilterRarity from './FilterRarity';
+import Catalogue from './Catalogue';
 
 import './Research.css';
 import DecorativeBorder from '../assets/decorative-border3.png';
@@ -13,11 +14,12 @@ class Research extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cards: props.singleCard,
+      cards: [],
       cardMana: -1,
       cardClass: '',
       cardRarity: '',
       cardName: '',
+      showResult: false,
     };
   }
 
@@ -41,8 +43,6 @@ class Research extends React.Component {
   };
 
   getCards = async () => {
-    this.setState({ cards: [] });
-
     const data = {};
     const { cardClass, cardRarity, cardMana, cardName } = this.state;
     if (cardClass !== '') {
@@ -74,12 +74,20 @@ class Research extends React.Component {
       .catch((error) => {
         console.log(error);
       });
-    this.setState({ cards: result });
+    this.setState({ cards: result, showResult: true });
   };
 
   render() {
     const title = 'Advanced Research';
-    const { cards, cardClass, cardRarity, cardMana, cardName } = this.state;
+    const {
+      cards,
+      cardClass,
+      cardRarity,
+      cardMana,
+      cardName,
+      showResult,
+    } = this.state;
+
     return (
       <div className="background">
         <div className="research-container">
@@ -105,7 +113,19 @@ class Research extends React.Component {
                 handleSelectRarity={this.handleSelectRarity}
               />
             </div>
-            <div className="cards-list">LE catalogue va ici lorem ipsum</div>
+            <div className="cards-list">
+              {showResult && <Catalogue card={cards} />}
+              {/* <div className="imgList">
+              {cards.map((card) => {
+                return (
+                  <DisplayListCard
+                    card={card}
+                    key={card.id}
+                    params={this.params}
+                  />
+                );
+              })} */}
+            </div>
           </div>
         </div>
       </div>
@@ -113,13 +133,23 @@ class Research extends React.Component {
   }
 }
 
+/* cardClass={cardClass}
+cardMana={cardMana}
+cardRarity={cardRarity}
+inputValue={cardName}
+handleChange={this.handleChange}
+handleSelectClass={this.handleSelectClass}
+handleSelectMana={this.handleSelectMana}
+handleSelectRarity={this.handleSelectRarity} */
+
 Research.propTypes = {
-  singleCard: PropTypes.arrayOf({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    rarity: PropTypes.string.isRequired,
-    mana: PropTypes.number.isRequired,
-    class: PropTypes.string.isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      rarity: PropTypes.string.isRequired,
+      mana: PropTypes.number.isRequired,
+      class: PropTypes.string.isRequired,
+    }).isRequired,
   }).isRequired,
 };
 
