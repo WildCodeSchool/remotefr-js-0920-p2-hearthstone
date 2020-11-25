@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import DeckBuilding from './components/DeckBuilding';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PagePrinc from './components/PagePrinc';
@@ -9,30 +10,7 @@ import SinglePage from './components/SinglePage';
 import Random from './components/Random';
 
 import './App.css';
-
-const cards = [
-  {
-    id: 1,
-    name: 'Jongleuse de lames',
-    rarity: 'rare',
-    mana: '6',
-    class: 'demon-hunter',
-  },
-  {
-    id: 2,
-    name: 'Whatley, maître de la piste',
-    rarity: 'légendaire',
-    mana: '5',
-    class: 'warrior',
-  },
-  {
-    id: 3,
-    name: 'Griffon du manège',
-    rarity: 'common',
-    mana: '5',
-    class: 'paladin',
-  },
-];
+import Tournaments from './components/Tournaments';
 
 const avatars = [
   {
@@ -88,11 +66,13 @@ function App() {
           <PagePrinc />
         </Route>
         <Route path="/research">
-          <Research singleCard={cards} />
+          <Research />
         </Route>
         <Route path="/random" component={Random} />
         <Route path="/search/:name" component={MultiResultPage} />
         <Route path="/card/:id" component={SinglePage} />
+        <Route path="/deckbuilding" component={DeckBuilding} />
+        <Route path="/tournament" component={Tournaments} />
       </Switch>
       <Footer
         avatar={avatars}

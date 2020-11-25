@@ -1,25 +1,19 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-class FilterResearch extends Component {
+class FilterName extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      inputValue: '',
-    };
+    this.state = {};
   }
-
-  handleChange = (event) => {
-    this.setState({ inputValue: event.target.value });
-    event.preventDefault();
-  };
 
   handleSubmit = (event) => {
     event.preventDefault();
   };
 
   render() {
-    const { inputValue } = this.state;
-    const { handleSubmit, handleChange } = this;
+    const { inputValue, handleChange } = this.props;
+    const { handleSubmit } = this;
 
     return (
       <div className="name-research">
@@ -40,4 +34,9 @@ class FilterResearch extends Component {
   }
 }
 
-export default FilterResearch;
+FilterName.propTypes = {
+  inputValue: PropTypes.string.isRequired,
+  handleChange: PropTypes.string.isRequired,
+};
+
+export default FilterName;
