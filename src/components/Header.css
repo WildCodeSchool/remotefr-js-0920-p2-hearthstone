@@ -26,7 +26,7 @@
 
   text-align: center;
   color: #f2cd61;
-  font-size: 25px;
+  font-size: 40px;
 
   padding: 1em 0em;
   padding-right: 1em;
@@ -55,13 +55,17 @@
 
     padding-bottom: 110px;
     padding-left: 15%;
-    padding-right: 8%;
+    padding-right: 13%;
   }
 
   .logo {
     display: flex;
     height: 8em;
     margin-bottom: 3%;
+  }
+
+  .logo:hover {
+    filter: contrast(120%);
   }
 }
 
@@ -75,7 +79,7 @@
   display: flex;
   justify-content: flex-end;
   padding: 7px 14px;
-  margin-right: 10px;
+  margin-right: 25px;
   max-height: 100;
 
   color: #62c9fa;
@@ -89,13 +93,24 @@
   font-size: 13px;
 }
 
+.rollmenu:focus {
+  outline: currentColor;
+}
+
 .nav-list-inactive {
-  display: none;
+  position: absolute;
+
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .nav-list-active {
+  opacity: 1;
+  height: auto;
   position: absolute;
   right: 0;
+  transition: opacity 0.5s ease-in-out;
   margin-top: 363px;
   width: 100%;
 
@@ -120,9 +135,14 @@
   text-decoration: none;
 }
 
+.nav-link-item-active:hover {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
 /* ------ Desktop version ------ */
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1085px) {
   .rollmenu {
     display: none;
   }
@@ -130,7 +150,7 @@
   .nav-list-active,
   .nav-list-inactive {
     width: 100%;
-    height: 20%;
+    height: 22%;
     margin-top: 297px;
 
     display: flex;
@@ -139,9 +159,9 @@
 
     background-image: url(../assets/texture.jpg);
     background-size: cover;
-    filter: opacity(0.9);
 
     list-style-type: none;
+    opacity: 1;
   }
 
   ul {
@@ -151,7 +171,9 @@
   .nav-list-item-active,
   .nav-list-item-inactive {
     display: block;
-    padding-top: 17px;
+    padding-top: 22px;
+    padding-left: 18px;
+    padding-right: 18px;
 
     font-size: 20px;
     font-family: 'Pridi', serif;
@@ -172,7 +194,6 @@
   .nav-link-item-inactive {
     padding-left: 25px;
     padding-right: 25px;
-    padding-top: 5px;
 
     color: white;
     text-decoration: none;
@@ -191,27 +212,45 @@
 
 /* ------ Desktop version ------ */
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1085px) {
+  #cardName {
+    cursor: text;
+    border-radius: 20px;
+    width: 60%;
+    height: 25px;
+    font-weight: bold;
+    background: rgb(60, 36, 13);
+    background: linear-gradient(
+      180deg,
+      rgba(60, 36, 13, 1) 0%,
+      rgba(104, 62, 22, 1) 35%,
+      rgba(60, 36, 13, 1) 100%
+    );
+    color: #f2cd61;
+    border-color: #ffd65c;
+
+    padding-left: 10px;
+    margin: 0px 2.5%;
+  }
+
+  #cardName:focus {
+    outline: 0;
+  }
+  #cardName::placeholder {
+    color: #f2cd61;
+    font-family: Pridi, serif;
+  }
+
   .search-bar {
     display: contents;
     display: flex;
     justify-content: flex-end;
-
-    margin-right: 6%;
-    margin-bottom: 1%;
-  }
-
-  #search {
-    width: 200px;
-    height: 30px;
-
-    border-radius: 20px;
+    margin-right: 5px;
   }
 
   #search-button {
     padding-left: 0.2em;
     padding-right: 0.2em;
-    margin-left: 0.5em;
 
     background-color: rgba(98, 201, 249, 0.514);
     border-radius: 30%;

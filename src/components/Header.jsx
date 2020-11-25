@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Logo from '../assets/testlogo2.png';
 import './Header.css';
+import SearchBar from './SearchBar';
 
 class Header extends React.Component {
   constructor(props) {
@@ -42,12 +43,29 @@ class Header extends React.Component {
         </button>
         <ul className={navIsActive}>
           <li className={navItemActive}>
-            <Link to="/research" className={navLinkActive}>
-              Advanced search
+            <Link
+              to="/research"
+              className={navLinkActive}
+              onClick={() => {
+                const newRollMenu = !active;
+                this.setState({ active: newRollMenu });
+              }}
+            >
+              Advanced search{' '}
+              <span role="img" aria-label="emoji">
+                🔎
+              </span>
             </Link>
           </li>
           <li className={navItemActive}>
-            <Link to="/random" className={navLinkActive}>
+            <Link
+              to="/random"
+              className={navLinkActive}
+              onClick={() => {
+                const newRollMenu = !active;
+                this.setState({ active: newRollMenu });
+              }}
+            >
               Random card{' '}
               <span role="img" aria-label="emoji">
                 🎲
@@ -55,23 +73,38 @@ class Header extends React.Component {
             </Link>
           </li>
           <li className={navItemActive}>
-            <Link to="/deckbuilding" className={navLinkActive}>
-              Deck building
+            <Link
+              to="/deckbuilding"
+              className={navLinkActive}
+              onClick={() => {
+                const newRollMenu = !active;
+                this.setState({ active: newRollMenu });
+              }}
+            >
+              Deck building{' '}
+              <span role="img" aria-label="emoji">
+                🃏
+              </span>
             </Link>
           </li>
           <li className={navItemActive}>
-            <Link to="/tournament" className={navLinkActive}>
-              Tournaments
+            <Link
+              to="/tournament"
+              className={navLinkActive}
+              onClick={() => {
+                const newRollMenu = !active;
+                this.setState({ active: newRollMenu });
+              }}
+            >
+              Tournaments{' '}
+              <span role="img" aria-label="emoji">
+                🎪
+              </span>
             </Link>
           </li>
         </ul>
         <div className="search-bar">
-          <input type="search" id="search" />
-          <button type="button" id="search-button">
-            <span role="img" aria-label="emoji" id="emoji">
-              🔍
-            </span>
-          </button>
+          <SearchBar />
         </div>
       </nav>
     );
