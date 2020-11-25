@@ -64,6 +64,11 @@ h1 {
 }
 .marker {
   list-style-type: none;
+  font-size: 18px;
+}
+
+.marker li {
+  margin-bottom: 1%;
 }
 
 /********************************

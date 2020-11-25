@@ -12,68 +12,78 @@ export const DisplayCard = (props) => {
       <h1>
         {card.name} (<span>{card.cardSet}</span>)
       </h1>
-      <div>{card.text}</div>
-
-      <div>Type :{card.type}</div>
-      <div>PlayerClass :{card.playerClass}</div>
-      <div>type :{card.type}</div>
-      <div>
-        Collectible :{card.collectible}
-        {card.collectible ? 'yes' : 'no'}
-      </div>
       <div>
         <img src={card.pictures_normal} alt={card.name} />
       </div>
 
       <ul className="marker">
-        <li>
-          <strong>Name:</strong>
-          {card.name}
-        </li>
-        <li>
-          <strong>Class:</strong>
-          {card.playerClass}
-        </li>
-        <li>
-          <strong>Rarity:</strong>
-          {card.rarity}
-        </li>
-        <li>
-          <strong>Type:</strong>
-          {card.type}
-        </li>
-        <li>
-          <strong>Cost:</strong>
-          {card.cost}
-        </li>
-        <li>
-          <strong>Attack:</strong>
-          {card.attack}
-        </li>
-        <li>
-          <strong>Health:</strong>
-          {card.health}
-        </li>
-        <li>
-          <strong>Text:</strong>
-          {card.text}
-        </li>
-        <li>
-          <strong>Race:</strong>
-          {card.race}
-        </li>
-        <li>
-          <strong>Set:</strong>
-          {card.cardSet}
-        </li>
-        <li>
-          <strong>Flavor text:</strong>
-          {card.flavor}
-        </li>
-        <li>
-          <strong>Artist:</strong>
-          {card.artist}
-        </li>
+        {card.playerClass && (
+          <li>
+            <strong>Class: </strong>
+            {card.playerClass}
+          </li>
+        )}
+
+        {card.rarity && (
+          <li>
+            <strong>Rarity: </strong>
+            {card.rarity}
+          </li>
+        )}
+        {card.type && (
+          <li>
+            <strong>Type: </strong>
+            {card.type}
+          </li>
+        )}
+        {card.cost && (
+          <li>
+            <strong>Cost: </strong>
+            {card.cost}
+          </li>
+        )}
+        {card.attack && (
+          <li>
+            <strong>Attack: </strong>
+            {card.attack}
+          </li>
+        )}
+        {card.health && (
+          <li>
+            <strong>Health: </strong>
+            {card.health}
+          </li>
+        )}
+        {card.text && (
+          <li>
+            <strong>Text: </strong>
+            {card.text}
+          </li>
+        )}
+        {card.race && (
+          <li>
+            <strong>Race: </strong>
+            {card.race}
+          </li>
+        )}
+        {card.cardSet && (
+          <li>
+            <strong>Set: </strong>
+            {card.cardSet}
+          </li>
+        )}
+        {card.flavor && (
+          <li>
+            <strong>Flavor text: </strong>
+            {card.flavor}
+          </li>
+        )}
+        {card.artist && (
+          <li>
+            <strong>Artist: </strong>
+            {card.artist}
+          </li>
+        )}
       </ul>
     </div>
   );
