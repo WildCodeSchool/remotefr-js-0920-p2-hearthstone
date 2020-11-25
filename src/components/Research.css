@@ -63,10 +63,16 @@
   font-size: 22px;
   font-family: 'Berkshire Swash', cursive;
 }
-
+.searchList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
 /* ------ Desktop version ------ */
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1358px) {
   .research-container h1 {
     font-size: 45px;
   }
@@ -99,10 +105,6 @@
     max-width: 50%;
     max-height: 530px;
     overflow: auto;
-  }
-
-  .cards-list p {
-    font-size: 18px;
   }
 
   .cards-list::-webkit-scrollbar {

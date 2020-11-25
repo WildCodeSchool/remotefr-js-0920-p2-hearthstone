@@ -67,9 +67,7 @@ class Research extends React.Component {
     const result = await axios
       .request(options)
       .then((response) => {
-        console.log('axios  : ', response.data);
         return response.data;
-        // console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -115,16 +113,6 @@ class Research extends React.Component {
             </div>
             <div className="cards-list">
               {showResult && <Catalogue card={cards} />}
-              {/* <div className="imgList">
-              {cards.map((card) => {
-                return (
-                  <DisplayListCard
-                    card={card}
-                    key={card.id}
-                    params={this.params}
-                  />
-                );
-              })} */}
             </div>
           </div>
         </div>
@@ -132,15 +120,6 @@ class Research extends React.Component {
     );
   }
 }
-
-/* cardClass={cardClass}
-cardMana={cardMana}
-cardRarity={cardRarity}
-inputValue={cardName}
-handleChange={this.handleChange}
-handleSelectClass={this.handleSelectClass}
-handleSelectMana={this.handleSelectMana}
-handleSelectRarity={this.handleSelectRarity} */
 
 Research.propTypes = {
   match: PropTypes.shape({
