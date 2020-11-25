@@ -48,7 +48,7 @@ class Header extends React.Component {
             </Link>
           </li>
           <li className={navItemActive}>
-            <Link to="/random" className={navLinkActive}>
+            <Link to="random" className={navLinkActive}>
               Random card{' '}
               <span role="img" aria-label="emoji">
                 🎲

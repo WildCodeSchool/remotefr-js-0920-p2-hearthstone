@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-// import Catalogue from './Catalogue';
 
 class FilterResearch extends Component {
   constructor(props) {
     super(props);
     this.state = {
       inputValue: '',
-      // cards: props.singleCard, // cards = Tableau d'objets Cartes (3 objets)
     };
   }
 
@@ -19,18 +17,8 @@ class FilterResearch extends Component {
     event.preventDefault();
   };
 
-  // getFilteredCards = () => {
-  //   const { cards, inputValue } = this.state;
-  //   return inputValue === ''
-  //     ? cards
-  //     : cards.filter((card) => card.name.includes(inputValue));
-  // };
-
-  // inputValue = filterName , filteredValues = filteredPokemons, cards = pokemons
-
   render() {
     const { inputValue } = this.state;
-    // const filteredValues = this.getFilteredCards();
     const { handleSubmit, handleChange } = this;
 
     return (
