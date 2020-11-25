@@ -33,19 +33,16 @@ h1 {
   background-image: url(../assets/papyrus.jpg);
   background-position: top;
   background-size: cover;
-  background-attachment: fixed;
 
   max-width: 90%;
-  padding: 3%;
-  padding-top: 1%;
-  margin: 0 3%;
+  padding: 1% 3%;
+  margin: 0px auto;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
 }
 
 .decorative-border {
@@ -215,7 +212,7 @@ h1 {
 
   .grid-container {
     display: grid;
-    grid-template-columns: 40% 20% 40%;
+    grid-template-columns: 35% 30% 35%;
     grid-template-rows: 75px 75px 75px 75px 75px 75px 75px;
     gap: 2% 0%;
     grid-template-areas:
@@ -263,11 +260,9 @@ h1 {
 
   .decorative-border {
     display: flex;
-    align-self: center;
     width: 50%;
     max-height: 40px;
-    margin-bottom: 20px;
-    margin-left: 25%;
+    margin: 20px auto;
     filter: opacity(80%) contrast(120%) hue-rotate(2deg);
   }
 }

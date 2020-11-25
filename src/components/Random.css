@@ -13,6 +13,9 @@
   filter: opacity(80%) contrast(120%) hue-rotate(2deg);
 }
 
+.articles {
+  margin: 0 3%;
+}
 .hs-text {
   display: table-cell;
   width: 100%;

@@ -8,16 +8,6 @@
 /* ------ Mobile version ------ */
 
 /*CSS du container principal*/
-.background {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  max-height: auto;
-  background-image: url(../assets/texture.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
 
 .research-container {
   background-image: url(../assets/papyrus.jpg);
@@ -26,11 +16,8 @@
   background-attachment: fixed;
   max-width: 90%;
   height: auto;
-  padding: 3%;
-  padding-top: 1%;
-  margin: 3%;
-  margin-top: 0;
-  margin-bottom: 0%;
+  padding: 1% 3%;
+  margin: 0px 3%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -83,22 +70,15 @@
 
   .research-content {
     flex-direction: row;
-  }
-
-  .decorative-border {
-    display: flex;
-    align-self: center;
-    width: 50%;
-    max-height: 40px;
-    margin-bottom: 20px;
-    margin-left: 25%;
-    filter: opacity(80%) contrast(120%) hue-rotate(2deg);
+    justify-content: space-between;
   }
 
   .filters {
     max-width: 50%;
     padding-right: 5px;
     border-right: 2px solid;
+    display: flex;
+    flex-direction: column;
   }
 
   .cards-list {
