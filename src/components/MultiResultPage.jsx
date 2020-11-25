@@ -119,4 +119,4 @@ DisplayListCard.propTypes = {
   }).isRequired,
 };
 
-export default MultiResultPage;
+// export default MultiResultPage;
