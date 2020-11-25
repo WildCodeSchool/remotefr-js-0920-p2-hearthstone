@@ -55,6 +55,9 @@ h1 {
   display: none;
 }
 
+.marker {
+  list-style-type: none;
+}
 /********************************
 -      GAME INTRODUCTION
 ********************************/
