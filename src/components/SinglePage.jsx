@@ -23,6 +23,7 @@ const DisplayCard = (props) => {
             {card.playerClass}
           </li>
         )}
+
         {card.rarity && (
           <li>
             <strong>Rarity: </strong>
