@@ -102,13 +102,13 @@ class Research extends React.Component {
                 cardClass={cardClass}
                 handleSelectClass={this.handleSelectClass}
               />
-              <FilterMana
-                cardMana={cardMana}
-                handleSelectMana={this.handleSelectMana}
-              />
               <FilterRarity
                 cardRarity={cardRarity}
                 handleSelectRarity={this.handleSelectRarity}
+              />
+              <FilterMana
+                cardMana={cardMana}
+                handleSelectMana={this.handleSelectMana}
               />
             </div>
             <div className="cards-list">

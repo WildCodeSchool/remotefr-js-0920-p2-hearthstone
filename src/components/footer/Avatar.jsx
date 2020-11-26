@@ -16,7 +16,7 @@ class Avatar extends Component {
   render() {
     const { smallUrl, name, id, bigUrl } = this.props;
     return (
-      <Link to="ourteam">
+      <Link to="/ourteam">
         <img
           className="change"
           id={id}

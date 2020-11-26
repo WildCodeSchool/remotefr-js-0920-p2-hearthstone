@@ -1,45 +1,41 @@
-.background {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  max-height: auto;
-  background-image: url(../assets/texture.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 .container {
-  font-size: 18px;
   background-image: url(../assets/papyrus.jpg);
-  background-position: top;
-  background-size: cover;
-  background-attachment: fixed;
-
-  max-width: 90%;
-  height: auto;
   padding: 3%;
   padding-top: 1%;
   margin: 0px 3%;
+}
+
+p {
+  font-size: 18px;
+  padding-bottom: 40px;
+}
+
+#mapid {
+  height: 370px;
+  width: 70%;
+  margin: 30px auto;
+}
+
+#mapid .leaflet-container {
+  height: 100%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
-  display: flex;
-  flex-direction: column;
 }
 
-h1 {
-  font-size: 36px;
-  font-family: 'Berkshire Swash', cursive;
-  text-align: center;
-  color: #683e16;
-  margin: 0;
+.tournament-register {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+icon {
+  width: 100px;
 }
 
 /* ------ Desktop version ------ */
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1085px) {
   h1 {
     font-size: 45px;
   }

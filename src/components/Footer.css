@@ -18,6 +18,7 @@ footer {
 .footer-container {
   text-decoration: none;
   display: flex;
+  justify-content: space-around;
   align-items: center;
   height: 26vh;
   overflow: hidden;
@@ -104,9 +105,9 @@ footer li {
 }
 
 /*********************************
-    Reponsive Media (Desktop > 1024px)
+    Reponsive Media (Desktop > 1085px)
 **********************************/
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1085px) {
   .links {
     display: flex;
     flex-direction: column;

@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Benoit from '../assets/AvatarCarteBenoit.png';
+import Benoit from '../assets/AvatarCarteBenoit2.png';
 import './Random.css';
 import DecorativeBorder from '../assets/decorative-border3.png';
 

@@ -40,7 +40,7 @@
 
 /* ------ Desktop version ------ */
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1085px) {
   .header {
     height: 22em;
     position: relative;
@@ -113,7 +113,7 @@
   transition: opacity 0.5s ease-in-out;
   margin-top: 363px;
   width: 100%;
-
+  z-index: 3000;
   list-style-type: none;
 }
 
