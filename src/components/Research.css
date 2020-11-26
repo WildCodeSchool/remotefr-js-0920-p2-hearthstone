@@ -27,20 +27,6 @@
 .research-content {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.research-container h1 {
-  padding-top: 1%;
-  margin-bottom: 15px;
-
-  font-size: 36px;
-  font-family: 'Berkshire Swash', cursive;
-}
-
-.decorative-border {
-  display: none;
 }
 
 .research-content h2 {
@@ -50,41 +36,160 @@
   font-size: 22px;
   font-family: 'Berkshire Swash', cursive;
 }
+
 .searchList {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin: 0 auto;
 }
+
+/********************************
+-           FILTERS
+********************************/
+
+.transparent-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.transparent-btn:focus {
+  outline: 0;
+}
+
+/* NAME */
+
+.name-research {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 10px;
+}
+
+#card-filter-search {
+  cursor: text;
+  border-radius: 20px;
+  width: 50%;
+  height: 25px;
+  font-weight: bold;
+  background: rgb(60, 36, 13);
+  background: linear-gradient(
+    180deg,
+    rgba(60, 36, 13, 1) 0%,
+    rgba(104, 62, 22, 1) 35%,
+    rgba(60, 36, 13, 1) 100%
+  );
+  color: #f2cd61;
+  border-color: #6e5e2e;
+  padding-left: 10px;
+}
+
+#card-filter-search:focus {
+  outline: 0;
+}
+
+#card-filter-search::placeholder {
+  color: #f2cd61;
+  font-family: Pridi, serif;
+}
+
+/* CLASSES */
+
+.class-filter-container {
+  padding-top: 25px;
+}
+
+.class-filter {
+  width: 45px;
+  padding: 0 5px;
+  cursor: pointer;
+  filter: brightness(10%) contrast(90%);
+}
+
+.class-filter-selected {
+  filter: none;
+}
+
+.class-filter:hover {
+  filter: none;
+}
+
+/* MANA */
+
+.mana-filter-container {
+  padding-top: 20px;
+}
+
+.mana-filter {
+  width: 40px;
+  padding: 0 2px;
+  cursor: pointer;
+}
+
+.mana-filter:hover {
+  filter: saturate(400%) brightness(200%);
+}
+
+.mana-filter-selected {
+  filter: saturate(400%) brightness(200%);
+}
+
+/*RARITY*/
+
+.rarity-filter-container {
+  padding-top: 20px;
+}
+
+.rarity-filter-container p {
+  font-size: 18px;
+  margin: 0;
+  padding: 2px;
+  color: #683e16;
+  font-family: 'Pridi', serif;
+}
+
+.rarity-filter {
+  padding: 0 5px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.rarity-filter:hover {
+  filter: brightness(170%) contrast(100%);
+}
+
+.rarity-filter-selected {
+  filter: brightness(170%) contrast(100%);
+}
+
 /* ------ Desktop version ------ */
 
 @media only screen and (min-width: 1358px) {
-  .research-container h1 {
-    font-size: 45px;
-  }
-
   .research-content h2 {
     font-size: 30px;
   }
 
   .research-content {
     flex-direction: row;
-    justify-content: space-between;
   }
 
   .filters {
-    max-width: 50%;
-    padding-right: 5px;
     border-right: 2px solid;
-    display: flex;
-    flex-direction: column;
+    padding: 0 5%;
   }
 
+  /********************************
+-         CARDS LIST
+********************************/
   .cards-list {
     max-width: 50%;
     max-height: 530px;
     overflow: auto;
+    padding: 0 2%;
+    display: flex;
+    justify-content: center;
   }
 
   .cards-list::-webkit-scrollbar {
@@ -165,140 +270,3 @@
     background: transparent;
   }
 }
-
-/********************************
--           FILTERS
-********************************/
-
-/* ------ Mobile version ------ */
-
-.transparent-btn {
-  background: transparent;
-  border: none;
-  padding: 0;
-}
-
-.transparent-btn:focus {
-  outline: 0;
-}
-
-/* NAME */
-
-.name-research {
-  display: flex;
-  flex-direction: column;
-
-  padding-top: 10px;
-}
-
-#card-filter-search {
-  cursor: text;
-  border-radius: 20px;
-  width: 50%;
-  height: 25px;
-  font-weight: bold;
-  background: rgb(60, 36, 13);
-  background: linear-gradient(
-    180deg,
-    rgba(60, 36, 13, 1) 0%,
-    rgba(104, 62, 22, 1) 35%,
-    rgba(60, 36, 13, 1) 100%
-  );
-  color: #f2cd61;
-  border-color: #6e5e2e;
-  padding-left: 10px;
-}
-
-#card-filter-search:focus {
-  outline: 0;
-}
-
-#card-filter-search::placeholder {
-  color: #f2cd61;
-  font-family: Pridi, serif;
-}
-
-/* CLASSES */
-
-.class-filter-container {
-  display: flex;
-  flex-direction: column;
-
-  max-width: 100%;
-  padding-top: 25px;
-}
-
-.class-filter {
-  display: flex;
-  width: 49px;
-  padding: 2px;
-  cursor: pointer;
-  filter: brightness(10%) contrast(90%);
-}
-
-.class-filter-selected {
-  filter: none;
-}
-
-.class-filter:hover {
-  filter: none;
-}
-
-/* MANA */
-
-.mana-filter-container {
-  padding-top: 20px;
-}
-
-.mana-filter {
-  display: flex;
-  width: 40px;
-  padding: 2px;
-  cursor: pointer;
-}
-
-.mana-filter:hover {
-  filter: saturate(400%) brightness(200%);
-}
-
-.mana-filter-selected {
-  filter: saturate(400%) brightness(200%);
-}
-
-/*RARITY*/
-
-.rarity-filter-container {
-  display: flex;
-  flex-direction: column;
-  padding-top: 20px;
-}
-
-.rarity-filter-container p {
-  font-size: 18px;
-  margin: 0;
-  color: #683e16;
-  font-family: 'Pridi', serif;
-}
-
-.rarity-filter {
-  padding-left: 5px;
-  padding-right: 5px;
-  width: 50px;
-  cursor: pointer;
-}
-
-.rarity-filter:hover {
-  filter: brightness(170%) contrast(100%);
-}
-
-.rarity-filter-selected {
-  filter: brightness(170%) contrast(100%);
-}
-
-/********************************
--         CARDS LIST
-********************************/
-
-/* ------ Mobile version ------ */
-
-/* ------ Desktop version ------ */
