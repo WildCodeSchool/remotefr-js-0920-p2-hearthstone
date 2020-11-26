@@ -18,6 +18,7 @@ footer {
 .footer-container {
   text-decoration: none;
   display: flex;
+  justify-content: space-around;
   align-items: center;
   height: 26vh;
   overflow: hidden;

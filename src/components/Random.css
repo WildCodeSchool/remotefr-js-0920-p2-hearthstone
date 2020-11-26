@@ -5,12 +5,12 @@
 
 .our-team {
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 .our-team img {
   height: 465px;
   width: 307px;
+  box-sizing: content-box;
 }
 
 .articles {

@@ -20,8 +20,8 @@ function Map() {
         <h1>Tournaments</h1>
         <p>
           <br />
-          Due to the actual crisis, some tournaments may be reported. Please
-          refer to the informations below.
+          Due to the actual crisis, some tournaments may be reported. <br />
+          Please refer to the informations below.
         </p>
         <div id="mapid">
           <MapContainer
