@@ -108,86 +108,8 @@ h1 {
   position: relative;
 }
 
-.card-image-inner {
-  position: relative;
-  display: inline-block;
-}
-
-.card-attack-icon {
-  position: absolute;
-  bottom: -6px;
-  left: -12px;
-}
-
-.card-attack-icon:hover {
-  width: 107px;
-  left: -14px;
-  bottom: -8px;
-}
-
-.card-health-icon {
-  position: absolute;
-  bottom: -6px;
-  left: 196px;
-}
-
-.card-health-icon:hover {
-  width: 107px;
-  left: 194px;
-  bottom: -8px;
-}
-
-.card-mana-icon {
-  position: absolute;
-  bottom: 309px;
-  left: 10px;
-}
-
-.card-mana-icon:hover {
-  width: 68px;
-  left: 8px;
-  bottom: 307px;
-}
-
-.card-rarity-icon {
-  position: absolute;
-  bottom: 117px;
-  left: 114px;
-}
-
-.card-rarity-icon:hover {
-  width: 70px;
-  left: 111px;
-  bottom: 115px;
-}
-
-.Name {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.Class {
-  margin-bottom: 10px;
-}
-
-.Rarity {
-  margin-bottom: 10px;
-}
-
-.Mana-cost {
-  margin-bottom: 10px;
-}
-
-.Attack {
-  margin-bottom: 10px;
-}
-
-.Health {
-  margin-bottom: 10px;
-}
-
-.Effect {
-  margin-bottom: 10px;
+#zephrys {
+  max-width: 100%;
 }
 
 /* ------ Desktop version ------ */
@@ -209,56 +131,6 @@ h1 {
 
   .background {
     padding-top: 0;
-  }
-
-  /* ------ Gestion du grid ------ */
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: 35% 30% 35%;
-    grid-template-rows: 75px 75px 75px 75px 75px 75px 75px;
-    gap: 2% 0%;
-    grid-template-areas:
-      '. Class .'
-      '. card_image .'
-      'Mana-Cost card_image .'
-      '. card_image Name'
-      'Effect card_image Rarity'
-      'Attack card_image Health'
-      '. . .';
-  }
-
-  .card_image {
-    grid-area: card_image;
-  }
-
-  .Mana-Cost {
-    grid-area: Mana-Cost;
-  }
-
-  .Name {
-    grid-area: Name;
-  }
-
-  .Rarity {
-    grid-area: Rarity;
-  }
-
-  .Health {
-    grid-area: Health;
-  }
-
-  .Effect {
-    grid-area: Effect;
-  }
-
-  .Attack {
-    grid-area: Attack;
-  }
-
-  .Class {
-    grid-area: Class;
-    margin-top: 40px;
   }
 
   .decorative-border {
