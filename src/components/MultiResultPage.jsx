@@ -79,7 +79,7 @@ class MultiResultPage extends React.Component {
         <div className="container">
           <div>
             <h1 className="title-selection">
-              Votre recherche avec les mots-clefs : <i>{name}</i>
+              First 20 results for : <i>{name}</i>
             </h1>
             <img
               className="decorative-border selection-border"
@@ -111,11 +111,11 @@ MultiResultPage.propTypes = {
 
 DisplayListCard.propTypes = {
   card: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    playerClass: PropTypes.string.isRequired,
-    rarity: PropTypes.string.isRequired,
-    cost: PropTypes.number.isRequired,
-    id: PropTypes.string.isRequired,
+    name: PropTypes.string,
+    playerClass: PropTypes.string,
+    rarity: PropTypes.string,
+    cost: PropTypes.number,
+    id: PropTypes.number.isRequired,
     pictures_normal: PropTypes.string.isRequired,
   }).isRequired,
 };

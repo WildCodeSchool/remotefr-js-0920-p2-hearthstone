@@ -36,7 +36,7 @@ class FilterName extends Component {
 
 FilterName.propTypes = {
   inputValue: PropTypes.string.isRequired,
-  handleChange: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
 };
 
 export default FilterName;

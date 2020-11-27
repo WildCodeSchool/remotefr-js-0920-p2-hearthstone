@@ -106,7 +106,7 @@ class FilterRarity extends Component {
 
 FilterRarity.propTypes = {
   cardRarity: PropTypes.string.isRequired,
-  handleSelectRarity: PropTypes.string.isRequired,
+  handleSelectRarity: PropTypes.func.isRequired,
 };
 
 export default FilterRarity;

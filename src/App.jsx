@@ -11,6 +11,7 @@ import Random from './components/Random';
 import Team from './components/Team';
 
 import './App.css';
+import 'leaflet/dist/leaflet.css';
 import Tournaments from './components/Tournaments';
 
 const avatars = [
@@ -64,7 +65,7 @@ function App() {
       <Header active={false} />
       <Switch>
         <Route exact path="/">
-          <PagePrinc />
+          <PagePrinc displayed={false} />
         </Route>
         <Route path="/research">
           <Research />

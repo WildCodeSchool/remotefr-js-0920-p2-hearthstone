@@ -1,4 +1,5 @@
 import React from 'react';
+import debug from 'debug';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import FilterName from './FilterName';
@@ -9,6 +10,8 @@ import Catalogue from './Catalogue';
 
 import './Research.css';
 import DecorativeBorder from '../assets/decorative-border3.png';
+
+const log = debug('resultpage');
 
 class Research extends React.Component {
   constructor(props) {
@@ -70,7 +73,7 @@ class Research extends React.Component {
         return response.data;
       })
       .catch((error) => {
-        console.log(error);
+        log(error);
       });
     this.setState({ cards: result, showResult: true });
   };
@@ -102,13 +105,13 @@ class Research extends React.Component {
                 cardClass={cardClass}
                 handleSelectClass={this.handleSelectClass}
               />
-              <FilterMana
-                cardMana={cardMana}
-                handleSelectMana={this.handleSelectMana}
-              />
               <FilterRarity
                 cardRarity={cardRarity}
                 handleSelectRarity={this.handleSelectRarity}
+              />
+              <FilterMana
+                cardMana={cardMana}
+                handleSelectMana={this.handleSelectMana}
               />
             </div>
             <div className="cards-list">
