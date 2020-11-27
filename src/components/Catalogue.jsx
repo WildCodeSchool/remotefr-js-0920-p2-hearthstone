@@ -24,13 +24,15 @@ class Catalogue extends Component {
 }
 
 Catalogue.propTypes = {
-  card: PropTypes.arrayOf({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    rarity: PropTypes.string.isRequired,
-    mana: PropTypes.number.isRequired,
-    class: PropTypes.string.isRequired,
-  }).isRequired,
+  card: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      rarity: PropTypes.string,
+      mana: PropTypes.number.isRequired,
+      class: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
 };
 
 export default Catalogue;

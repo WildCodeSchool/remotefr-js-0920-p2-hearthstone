@@ -65,7 +65,7 @@ function App() {
       <Header active={false} />
       <Switch>
         <Route exact path="/">
-          <PagePrinc />
+          <PagePrinc displayed={false} />
         </Route>
         <Route path="/research">
           <Research />
