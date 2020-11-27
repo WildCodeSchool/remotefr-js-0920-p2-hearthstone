@@ -4,11 +4,7 @@ import './PagePrinc.css';
 
 import DecorativeBorder from '../assets/decorative-border3.png';
 
-import zephrysEN from '../assets/zephrysEN.png';
-import attackCard from '../assets/Presentation-images/attack-zephrys-card.png';
-import healthCard from '../assets/Presentation-images/health-zephrys-card.png';
-import manaCard from '../assets/Presentation-images/mana-zephrys-card.png';
-import rarityCard from '../assets/Presentation-images/rarity-zephrys-card.png';
+import zephrysEN from '../assets/Zephrys.png';
 
 class PagePrinc extends React.Component {
   constructor(props) {
@@ -72,62 +68,15 @@ class PagePrinc extends React.Component {
               alt="Decorative border under title"
             />
             <p>
-              Cards are the basic pieces of Hearthstone. Each one defines an
-              action the player can do by playing that card. They contain
-              several specificites:
+              Cards are the basic pieces of Hearthstone. <br />
+              Each one defines an action the player can do by playing that card.
+              They contain several specificites :
             </p>
             <div className="grid-container">
               <article className="card_image">
                 <div className="card-image-inner">
-                  <img src={zephrysEN} alt="Zephrys" />
-                  <img
-                    className="card-attack-icon"
-                    src={attackCard}
-                    alt="Card attack icon"
-                  />
-
-                  <img
-                    className="card-health-icon"
-                    src={healthCard}
-                    alt="Card health icon"
-                  />
-                  <img
-                    className="card-mana-icon"
-                    src={manaCard}
-                    alt="Card mana icon"
-                  />
-                  <img
-                    className="card-rarity-icon"
-                    src={rarityCard}
-                    alt="Card rarity icon"
-                  />
+                  <img id="zephrys" src={zephrysEN} alt="Zephrys" />
                 </div>
-              </article>
-              <article className="Mana-Cost">
-                <strong className="center">Mana cost: </strong> Card mana cost.
-              </article>
-              <article className="Name">
-                <strong className="center">Name: </strong>
-                <span> Card name.</span>
-              </article>
-              <article className="Rarity">
-                <strong className="center">Rarity: </strong>
-                <span className="right">
-                  From common(frequent) to legendary(rarest) .
-                </span>
-              </article>
-              <article className="Health">
-                <strong className="center">Health: </strong>
-                <span className="right">Damge a minion can take.</span>
-              </article>
-              <article className="Effect">
-                <strong>Effect:</strong> Some cards have a battlefield effect.
-              </article>
-              <article className="Attack">
-                <strong>Attack:</strong> Damage dealt by the minion.
-              </article>
-              <article className="Class">
-                <strong>Class:</strong> Ten classes are available.
               </article>
             </div>
           </blockquote>
