@@ -186,7 +186,7 @@ class FilterClass extends Component {
 
 FilterClass.propTypes = {
   cardClass: PropTypes.string.isRequired,
-  handleSelectClass: PropTypes.string.isRequired,
+  handleSelectClass: PropTypes.func.isRequired,
 };
 
 export default FilterClass;

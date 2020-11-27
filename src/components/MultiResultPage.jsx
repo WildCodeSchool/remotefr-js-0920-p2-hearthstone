@@ -111,11 +111,11 @@ MultiResultPage.propTypes = {
 
 DisplayListCard.propTypes = {
   card: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    playerClass: PropTypes.string.isRequired,
-    rarity: PropTypes.string.isRequired,
-    cost: PropTypes.number.isRequired,
-    id: PropTypes.string.isRequired,
+    name: PropTypes.string,
+    playerClass: PropTypes.string,
+    rarity: PropTypes.string,
+    cost: PropTypes.number,
+    id: PropTypes.number.isRequired,
     pictures_normal: PropTypes.string.isRequired,
   }).isRequired,
 };

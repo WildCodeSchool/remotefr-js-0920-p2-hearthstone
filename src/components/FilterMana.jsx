@@ -170,8 +170,8 @@ class FilterMana extends Component {
 }
 
 FilterMana.propTypes = {
-  cardMana: PropTypes.string.isRequired,
-  handleSelectMana: PropTypes.string.isRequired,
+  cardMana: PropTypes.number.isRequired,
+  handleSelectMana: PropTypes.func.isRequired,
 };
 
 export default FilterMana;

@@ -149,23 +149,25 @@ class SinglePage extends React.Component {
 }
 
 DisplayCard.propTypes = {
-  card: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    playerClass: PropTypes.string.isRequired,
-    rarity: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    cost: PropTypes.number.isRequired,
-    attack: PropTypes.number.isRequired,
-    health: PropTypes.number.isRequired,
-    text: PropTypes.string.isRequired,
-    race: PropTypes.string.isRequired,
-    cardSet: PropTypes.string.isRequired,
-    flavor: PropTypes.string.isRequired,
-    artist: PropTypes.string.isRequired,
-    img: PropTypes.string.isRequired,
-    collectible: PropTypes.string.isRequired,
-    pictures_normal: PropTypes.string.isRequired,
-  }).isRequired,
+  card: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      playerClass: PropTypes.string.isRequired,
+      rarity: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      cost: PropTypes.number.isRequired,
+      attack: PropTypes.number.isRequired,
+      health: PropTypes.number.isRequired,
+      text: PropTypes.string.isRequired,
+      race: PropTypes.string.isRequired,
+      cardSet: PropTypes.string.isRequired,
+      flavor: PropTypes.string.isRequired,
+      artist: PropTypes.string.isRequired,
+      img: PropTypes.string.isRequired,
+      collectible: PropTypes.string.isRequired,
+      pictures_normal: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
 };
 
 SinglePage.propTypes = {
